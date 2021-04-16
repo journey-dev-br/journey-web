@@ -1,0 +1,15 @@
+<div>
+
+    <div *ngIf="recoverAPI; else loading">
+        <div *ngFor="let article of articles">
+            <a [routerLink]="['/article', article.id ]" class="text-decoration-none">
+                {{article.title}} 
+            </a>
+        </div>
+    </div>
+
+    <ng-template #loading>
+        <span>Carregando...</span>
+    </ng-template>
+
+</div>

@@ -1,0 +1,21 @@
+
+.button-area-container {
+    background-color: #dddddd;
+    margin: 10px;
+    margin-left: 14px;
+    margin-right: 14px;
+    width: min-content;
+    border-bottom-left-radius: 6px;
+    display: flex;
+}
+
+.button-area-text {
+    background-color: #ffffff;
+    margin-left: 2px;   
+    margin-bottom: 8px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-family: 'Goldman', cursive;
+    font-size:  calc( 1.6vw + 16px ); 
+    color: #247ba0;
+}

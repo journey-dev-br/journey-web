@@ -1,0 +1,64 @@
+
+<div class="themes-container">
+
+    <div *ngIf="recoverAPI; else loading">
+
+        <div class="themes-top">
+            <div *ngIf="area">
+                <app-button-area [area]="area"></app-button-area> 
+            </div>
+        </div>
+
+        <div *ngFor="let theme of themes">
+            <div>{{theme.title}}</div>
+        </div>
+
+    </div>
+
+    <ng-template #loading>
+        <span>Carregando...</span>
+    </ng-template>
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+    <div class="themes-top">
+        <div *ngIf="area$ | async as area; else loading">
+
+            <div>Area:</div>
+            <div *ngFor="let a of area">
+                <a [routerLink]="['/themes', a.name ]" class="text-decoration-none">
+                    <app-button-area [title]="a.title"></app-button-area> 
+                </a>
+            </div>
+
+            <div *ngIf="area | async as a">
+                <div>Area: {{a.title}}</div>
+            </div>
+
+        </div>
+        <ng-template #loading>
+            <span>Carregando...</span>
+        </ng-template>
+    </div>
+    <div class="themes-top">
+        <a [routerLink]="['/themes', area.name ]" class="text-decoration-none">
+            <app-button-area [area]="area.title"></app-button-area>
+        </a>
+    </div>
+    <div class="themes-list">
+        <div *ngFor="let theme of articles_theme" class="themes-list-item">
+            <a [routerLink]="['/articles', theme.area , theme.theme ]" class="text-decoration-none">
+                <app-button-theme theme="{{theme.title}}" icon="{{theme.theme}}" quantity="{{theme.quantity}}"></app-button-theme>
+            </a>
+        </div>
+    </div>
+-->
+</div>
