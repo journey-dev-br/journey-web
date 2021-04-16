@@ -12,6 +12,7 @@ import { ArticlesService } from '../../services/articles.service'
 })
 export class SearchComponent implements OnInit {
     public recoverAPI: boolean = false
+    public recoverError: boolean = false
     public articles: Article[] = []
 
     constructor(
@@ -23,8 +24,10 @@ export class SearchComponent implements OnInit {
         this.controllerService.recoverDataAPI(this.resultRecoverAPI.bind(this))
     }
 
-    resultRecoverAPI() {
+    resultRecoverAPI(get: string = "", success: boolean = false) {
+        console.log("themes> get: ", get, " success: ", success)
         this.recoverAPI = true
+        this.recoverError = !success
         this.articles = this.articlesService.getArticles()
     }
 

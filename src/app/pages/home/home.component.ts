@@ -14,6 +14,7 @@ import { ArticlesService } from '../../services/articles.service'
 })
 export class HomeComponent implements OnInit {
     public recoverAPI: boolean = false
+    public recoverError: boolean = false
     public areas: Area[] = []
     public articles: Article[] = []
 
@@ -27,10 +28,12 @@ export class HomeComponent implements OnInit {
         this.controllerService.recoverDataAPI(this.resultRecoverAPI.bind(this))
     }
 
-    resultRecoverAPI() {
+    resultRecoverAPI(get: string = "", success: boolean = false) {
+        console.log("themes> get: ", get, " success: ", success)
         this.recoverAPI = true
+        this.recoverError = !success
         this.areas = this.areasService.getAreas()
-        this.articles = this.articlesService.getArticles()
+        this.articles = this.articlesService.getNewArticles()
     }
 
 }

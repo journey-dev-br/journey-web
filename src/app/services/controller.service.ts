@@ -20,6 +20,7 @@ export class ControllerService {
     public themes: Theme[] = []
     public articles: Article[] = []
     public areaThemes: AreaTheme[] = []
+    public inCounter: boolean = false
 
     constructor(
         private areasService: AreasService,
@@ -31,29 +32,36 @@ export class ControllerService {
         this.areasService.getAreasAPI().subscribe(response => {
             this.areas = response
             this.inGetAreas = true
-            this.checksResult(resultRecoverAPI)
+            this.checksResult(resultRecoverAPI, "areas")
         })
         this.themesService.getThemesAPI().subscribe(response => {
             this.themes = response
             this.inGetThemes = true
-            this.checksResult(resultRecoverAPI)
+            this.checksResult(resultRecoverAPI, "themes")
         })
         this.articlesService.getArticlesAPI().subscribe(response => {
             this.articles = response
             this.inGetArticles = true
-            this.checksResult(resultRecoverAPI)
+            this.checksResult(resultRecoverAPI, "articles")
         })
     }
 
-    checksResult(resultRecoverAPI: Function) {
+    checksResult(resultRecoverAPI: Function, get: string) {
         if ( this.inGetAreas && this.inGetThemes && this.inGetArticles ) {
-            this.countAreaTheme()
-            resultRecoverAPI()
+            if ( !this.inCounter ) {
+                this.countAreaTheme()
+            }
+            if ( this.areas.length > 0 && this.themes.length > 0 && this.articles.length > 0 ) {
+                resultRecoverAPI(get, true)
+            } else {
+                resultRecoverAPI(get, false)
+            }
         }
     }
 
     countAreaTheme(): void {
-        console.log("controller> Vai contar os artigos dos temas...")
+        this.inCounter = true
+        this.areaThemes = []
         var count: number
         for ( let area of this.areas ) {
             for ( let theme of this.themes ) {
@@ -69,12 +77,11 @@ export class ControllerService {
     }
 
     setAreaTheme( area: string, name: string, title: string, quantity: number = 0 ): void {
-        console.log("controller> area: ", area, " theme: ", name, " quantity: ", quantity)
         this.areaThemes.push({ area, name, title, quantity })
     }
 
     public getAreaThemes( area: string ): AreaTheme[] {
-        return this.areaThemes.filter( a => { return a.area == area } )
+        return this.areaThemes.filter( t => t.area == area )
     }
 
 }

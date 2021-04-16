@@ -2,18 +2,24 @@
 
     <div *ngIf="recoverAPI; else loading">
 
-        <div *ngFor="let area of areas">
-            <a [routerLink]="['/themes', area.name ]" class="text-decoration-none">
-                <app-button-area [area]="area"></app-button-area> 
-            </a>
+        <div *ngIf="!recoverError; else error">
+
+            <div *ngFor="let area of areas">
+                <a [routerLink]="['/themes', area.name ]" class="text-decoration-none">
+                    <app-button-area [area]="area"></app-button-area> 
+                </a>
+            </div>
+
+            <div *ngFor="let article of articles">
+                <div>{{article.title}}</div>
+            </div>
+
         </div>
 
-        <div *ngFor="let article of articles">
-            <div>{{article.title}}</div>
-        </div>
-
-
-
+        <ng-template #error>
+            <span>Ocorreu um erro...</span>
+        </ng-template>
+    
     </div>
 
     <ng-template #loading>

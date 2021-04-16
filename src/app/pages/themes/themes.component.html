@@ -3,15 +3,23 @@
 
     <div *ngIf="recoverAPI; else loading">
 
-        <div class="themes-top">
-            <div *ngIf="area">
-                <app-button-area [area]="area"></app-button-area> 
+        <div *ngIf="!recoverError; else error">
+
+            <div class="themes-top">
+                <div *ngIf="area">
+                    <app-button-area [area]="area"></app-button-area> 
+                </div>
             </div>
+    
+            <div *ngFor="let theme of themes">
+                <div>{{theme.area}} {{theme.title}} {{theme.quantity}}</div>
+            </div>
+
         </div>
 
-        <div *ngFor="let theme of themes">
-            <div>{{theme.title}}</div>
-        </div>
+        <ng-template #error>
+            <span>Ocorreu um erro...</span>
+        </ng-template>
 
     </div>
 

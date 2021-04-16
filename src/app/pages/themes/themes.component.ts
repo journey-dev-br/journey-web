@@ -15,6 +15,7 @@ import { ThemesService } from '../../services/themes.service'
 })
 export class ThemesComponent implements OnInit {
     public recoverAPI: boolean = false
+    public recoverError: boolean = false
     public parm_area: string
     public area: Area = undefined
     public themes: Theme[] = []
@@ -31,12 +32,15 @@ export class ThemesComponent implements OnInit {
         this.controllerService.recoverDataAPI(this.resultRecoverAPI.bind(this))
     }
 
-    resultRecoverAPI() {
+    resultRecoverAPI(get: string = "", success: boolean = false) {
+        console.log("themes> get: ", get, " success: ", success)
         this.recoverAPI = true
+        this.recoverError = !success
         console.log("themes> parm_area: ", this.parm_area)
         this.area = this.areasService.getArea(this.parm_area)
         console.log("themes> area: ", this.area)
-        this.themes = this.themesService.getThemes()
+        // this.themes = this.themesService.getThemes()
+        this.themes = this.controllerService.getAreaThemes(this.parm_area)
     }
 
 }
