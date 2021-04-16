@@ -47,6 +47,15 @@ export class ArticlesService {
         return this.articles
     }
 
+    /*-- Retorna Artigos de uma Area e Tema --*/
+    public getArticlesAreaTheme(area: string, theme: string): Article[] {
+        var response: Article[] = []
+        for ( let article of this.articles ) {
+            if ( article.area == area && article.theme == theme ) { response.push(article) }
+        }
+        return response
+    }
+
     /*-- Retorna os novos Artigos --*/
     public getNewArticles(): Article[] {
         return this.articles.filter( a => a.isNew )

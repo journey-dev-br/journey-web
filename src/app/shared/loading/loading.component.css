@@ -1,0 +1,7 @@
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}

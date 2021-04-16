@@ -45,6 +45,14 @@ export class ThemesService {
         return this.themes
     }
 
+    public getTheme(name: string): Theme {
+        var response: Theme
+        for ( let theme of this.themes ) {
+            if ( theme.name == name ) { response = theme }
+        }
+        return response
+    }
+
     /*-- Manipulação de erros --*/
     handleError(error: HttpErrorResponse) {
         let errorMessage = ''

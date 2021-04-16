@@ -11,7 +11,9 @@
             </div>
 
             <div *ngFor="let article of articles">
-                <div>{{article.title}}</div>
+                <a [routerLink]="['/article', article.id ]" class="text-decoration-none">
+                    <div>{{article.title}}</div>
+                </a>
             </div>
 
         </div>
@@ -23,7 +25,7 @@
     </div>
 
     <ng-template #loading>
-        <span>Carregando...</span>
+        <app-loading></app-loading>
     </ng-template>
 
 

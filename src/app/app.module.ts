@@ -16,6 +16,9 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 import { ButtonAreaComponent } from './components/button-area/button-area.component';
 import { ThemesComponent } from './pages/themes/themes.component';
 import { SearchComponent } from './pages/search/search.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
+import { ArticleComponent } from './pages/article/article.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +33,10 @@ import { SearchComponent } from './pages/search/search.component';
         PageNotFoundComponent,
         ButtonAreaComponent,
         ThemesComponent,
-        SearchComponent
+        SearchComponent,
+        ArticlesComponent,
+        ArticleComponent,
+        LoadingComponent
     ],
     imports: [
         BrowserModule,

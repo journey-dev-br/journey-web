@@ -12,7 +12,9 @@
             </div>
     
             <div *ngFor="let theme of themes">
-                <div>{{theme.area}} {{theme.title}} {{theme.quantity}}</div>
+                <a [routerLink]="['/articles', theme.area , theme.name ]" class="text-decoration-none">
+                    <div>{{theme.area}} {{theme.title}} {{theme.quantity}}</div>
+                </a>
             </div>
 
         </div>
@@ -24,7 +26,7 @@
     </div>
 
     <ng-template #loading>
-        <span>Carregando...</span>
+        <app-loading></app-loading>
     </ng-template>
 
 
