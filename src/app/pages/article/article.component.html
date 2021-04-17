@@ -1,1 +1,44 @@
-<p>article works!</p>
+<div class="article-container">
+
+    <div *ngIf="recoverAPI; else loading">
+
+        <div *ngIf="!recoverError; else error">
+
+            Mostrar o Artigo aqui...
+            {{ article.title }}
+            {{ article.date }}
+            {{ article.description }}
+<!-- 
+            <div>
+                <div *ngIf="area">
+                    <app-area-button [area]="area"></app-area-button> 
+                </div>
+            </div>
+    
+            <div>
+                <div *ngIf="theme">
+                    {{theme.title}} 
+                </div>
+            </div>
+    
+            <div *ngFor="let article of articles">
+                <a [routerLink]="['/article', article.id ]" class="text-decoration-none">
+                    <div>{{article.id}} {{article.title}}</div>
+                </a>
+            </div>
+-->
+
+        </div>
+
+        <ng-template #error>
+            <app-process-error></app-process-error>
+        </ng-template>
+
+    </div>
+
+    <ng-template #loading>
+        <app-loading></app-loading>
+    </ng-template>
+
+</div>
+

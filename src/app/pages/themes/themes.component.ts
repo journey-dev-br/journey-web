@@ -14,6 +14,9 @@ import { ThemesService } from '../../services/themes.service'
     styleUrls: ['./themes.component.css']
 })
 export class ThemesComponent implements OnInit {
+    public isLinkArea: boolean = false
+    public isLinkTheme: boolean = true
+    public showQuantity: boolean = true
     public recoverAPI: boolean = false
     public recoverError: boolean = false
     public parm_area: string

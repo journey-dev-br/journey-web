@@ -1,0 +1,18 @@
+<div class="area-button-container">
+
+    <div *ngIf="isLink; else noLink">
+        <a [routerLink]="['/themes', area.name ]" class="text-decoration-none">
+            <ng-template [ngTemplateOutlet]="Content"></ng-template>
+        </a>
+    </div>
+
+    <ng-template #noLink>
+        <ng-template [ngTemplateOutlet]="Content"></ng-template>
+    </ng-template>
+
+    <!-- Conteudo do Button -->
+    <ng-template #Content >
+        <div class="area-button-text">{{area.title}}</div>
+    </ng-template>    
+
+</div>

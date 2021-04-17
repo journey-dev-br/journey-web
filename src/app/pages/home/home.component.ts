@@ -13,6 +13,7 @@ import { ArticlesService } from '../../services/articles.service'
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+    public isLink: boolean = true
     public recoverAPI: boolean = false
     public recoverError: boolean = false
     public areas: Area[] = []

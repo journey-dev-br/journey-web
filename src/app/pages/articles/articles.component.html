@@ -7,13 +7,16 @@
 
             <div>
                 <div *ngIf="area">
-                    <app-button-area [area]="area"></app-button-area> 
+                    <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
                 </div>
             </div>
     
             <div>
                 <div *ngIf="theme">
-                    {{theme.title}} 
+                    <app-theme-button [theme]="theme" 
+                        [isLink]="isLinkTheme" 
+                        [showQuantity]="showQuantity">
+                    </app-theme-button>
                 </div>
             </div>
     
@@ -26,7 +29,7 @@
         </div>
 
         <ng-template #error>
-            <span>Ocorreu um erro...</span>
+            <app-process-error></app-process-error>
         </ng-template>
 
     </div>

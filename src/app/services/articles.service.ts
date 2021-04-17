@@ -47,6 +47,15 @@ export class ArticlesService {
         return this.articles
     }
 
+    /*-- Retorna um Artigo --*/
+    public getArticle(id: string): Article {
+        var response: Article = undefined
+        for ( let article of this.articles ) {
+            if ( article.id == id ) { response = article }
+        }
+        return response
+    }
+
     /*-- Retorna Artigos de uma Area e Tema --*/
     public getArticlesAreaTheme(area: string, theme: string): Article[] {
         var response: Article[] = []

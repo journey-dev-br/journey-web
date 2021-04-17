@@ -5,22 +5,25 @@
 
         <div *ngIf="!recoverError; else error">
 
+            <!-- Botão da Area -->
             <div class="themes-top">
                 <div *ngIf="area">
-                    <app-button-area [area]="area"></app-button-area> 
+                    <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
                 </div>
             </div>
     
+            <!-- Botões dos Temas da Area -->
             <div *ngFor="let theme of themes">
-                <a [routerLink]="['/articles', theme.area , theme.name ]" class="text-decoration-none">
-                    <div>{{theme.area}} {{theme.title}} {{theme.quantity}}</div>
-                </a>
+                <app-theme-button [theme]="theme" 
+                    [isLink]="isLinkTheme" 
+                    [showQuantity]="showQuantity">
+                </app-theme-button>
             </div>
 
         </div>
 
         <ng-template #error>
-            <span>Ocorreu um erro...</span>
+            <app-process-error></app-process-error>
         </ng-template>
 
     </div>
@@ -29,46 +32,4 @@
         <app-loading></app-loading>
     </ng-template>
 
-
-
-
-
-
-
-
-
-
-    <!-- 
-    <div class="themes-top">
-        <div *ngIf="area$ | async as area; else loading">
-
-            <div>Area:</div>
-            <div *ngFor="let a of area">
-                <a [routerLink]="['/themes', a.name ]" class="text-decoration-none">
-                    <app-button-area [title]="a.title"></app-button-area> 
-                </a>
-            </div>
-
-            <div *ngIf="area | async as a">
-                <div>Area: {{a.title}}</div>
-            </div>
-
-        </div>
-        <ng-template #loading>
-            <span>Carregando...</span>
-        </ng-template>
-    </div>
-    <div class="themes-top">
-        <a [routerLink]="['/themes', area.name ]" class="text-decoration-none">
-            <app-button-area [area]="area.title"></app-button-area>
-        </a>
-    </div>
-    <div class="themes-list">
-        <div *ngFor="let theme of articles_theme" class="themes-list-item">
-            <a [routerLink]="['/articles', theme.area , theme.theme ]" class="text-decoration-none">
-                <app-button-theme theme="{{theme.title}}" icon="{{theme.theme}}" quantity="{{theme.quantity}}"></app-button-theme>
-            </a>
-        </div>
-    </div>
--->
 </div>

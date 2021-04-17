@@ -1,5 +1,5 @@
 
-.button-area-container {
+.area-button-container {
     background-color: #dddddd;
     margin: 10px;
     margin-left: 14px;
@@ -9,7 +9,7 @@
     display: flex;
 }
 
-.button-area-text {
+.area-button-text {
     background-color: #ffffff;
     margin-left: 2px;   
     margin-bottom: 8px;

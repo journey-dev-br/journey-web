@@ -4,12 +4,12 @@
 
         <div *ngIf="!recoverError; else error">
 
+            <!-- Lista de Areas -->
             <div *ngFor="let area of areas">
-                <a [routerLink]="['/themes', area.name ]" class="text-decoration-none">
-                    <app-button-area [area]="area"></app-button-area> 
-                </a>
+                <app-area-button [area]="area" [isLink]="isLink"></app-area-button> 
             </div>
 
+            <!-- Lista de Artigos Novos -->
             <div *ngFor="let article of articles">
                 <a [routerLink]="['/article', article.id ]" class="text-decoration-none">
                     <div>{{article.title}}</div>
@@ -19,7 +19,7 @@
         </div>
 
         <ng-template #error>
-            <span>Ocorreu um erro...</span>
+            <app-process-error></app-process-error>
         </ng-template>
     
     </div>
@@ -28,30 +28,4 @@
         <app-loading></app-loading>
     </ng-template>
 
-
-
-<!-- 
-    <div *ngIf="areas$ | async as areas; else loading">
-        <div *ngIf="themes$ | async as themes; else loading">
-
-            <div>Lista de Areas:</div>
-            <div *ngFor="let area of areas">
-                <a [routerLink]="['/themes', area.name ]" class="text-decoration-none">
-                    <app-button-area [title]="area.title"></app-button-area> 
-                </a>
-            </div>
-
-            <div>Lista de Temas:</div>
-            <div *ngFor="let theme of themes">
-                <a [routerLink]="['/themes', theme.name ]" class="text-decoration-none">
-                    {{theme.title}}
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <ng-template #loading>
-        <span>Carregando...</span>
-    </ng-template>
--->
 </div>

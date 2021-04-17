@@ -1,0 +1,34 @@
+<div class="theme-button-container theme-button-margin">
+    
+    <div *ngIf="isLink; else noLink">
+        <a [routerLink]="['/articles', theme.area , theme.name ]" class="text-decoration-none">
+            <ng-template [ngTemplateOutlet]="Content"></ng-template>
+        </a>
+    </div>
+
+    <ng-template #noLink>
+        <ng-template [ngTemplateOutlet]="Content"></ng-template>
+    </ng-template>
+
+    <!-- Conteudo do Button -->
+    <ng-template #Content >
+        <div class="theme-button-left">
+            <div class="theme-button-icon">
+                Icon
+                <!-- <app-icon-show icon='{{icon}}'></app-icon-show> -->
+            </div>
+            <div class="theme-button-text">{{theme.title}}</div>
+        </div>
+        <div *ngIf="showQuantity" class="theme-button-right">
+            <div class="theme-button-quantity">{{theme.quantity}}</div>
+        </div>
+    </ng-template>    
+
+</div>
+
+
+
+
+
+
+

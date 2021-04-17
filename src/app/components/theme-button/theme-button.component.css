@@ -1,0 +1,50 @@
+
+.theme-button-container {
+    background-color: #ffffff;
+    margin: 6px;
+    display: flex;
+    justify-content: space-between;
+    border: solid;
+    border-width: 2px;
+    border-color: #dedede;
+    border-radius: 10px;
+}
+
+.theme-button-left {
+    display: flex;
+    align-items: center;
+}
+
+.theme-button-right {
+    display: flex;
+    align-items: flex-start;
+}
+
+.theme-button-text {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-family: 'Courgette', cursive;
+    font-size:  calc( 1.6vw + 16px ); 
+    color: #e63946;
+}
+
+.theme-button-icon {
+    padding: 10px;
+}
+
+.theme-button-quantity {
+    margin: 5px;
+    color: #4361ee;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.theme-button-margin {
+    width: 60vw;
+}
+
+@media only screen and (min-width: 415px) {
+    .theme-button-margin {
+        width: 50vw;
+    }
+}

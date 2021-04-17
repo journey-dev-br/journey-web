@@ -13,12 +13,16 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
-import { ButtonAreaComponent } from './components/button-area/button-area.component';
 import { ThemesComponent } from './pages/themes/themes.component';
 import { SearchComponent } from './pages/search/search.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { ProcessErrorComponent } from './shared/process-error/process-error.component';
+import { ArticleButtonComponent } from './components/article-button/article-button.component';
+import { ArticleShowComponent } from './components/article-show/article-show.component';
+import { ThemeButtonComponent } from './components/theme-button/theme-button.component';
+import { AreaButtonComponent } from './components/area-button/area-button.component';
 
 @NgModule({
     declarations: [
@@ -31,12 +35,16 @@ import { LoadingComponent } from './shared/loading/loading.component';
         AboutComponent,
         MenuComponent,
         PageNotFoundComponent,
-        ButtonAreaComponent,
         ThemesComponent,
         SearchComponent,
         ArticlesComponent,
         ArticleComponent,
-        LoadingComponent
+        LoadingComponent,
+        ProcessErrorComponent,
+        ArticleButtonComponent,
+        ArticleShowComponent,
+        ThemeButtonComponent,
+        AreaButtonComponent
     ],
     imports: [
         BrowserModule,

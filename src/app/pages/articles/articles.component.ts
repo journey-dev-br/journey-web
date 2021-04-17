@@ -16,6 +16,9 @@ import { ArticlesService } from '../../services/articles.service'
     styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent implements OnInit {
+    public isLinkArea: boolean = true
+    public isLinkTheme: boolean = false
+    public showQuantity: boolean = false
     public recoverAPI: boolean = false
     public recoverError: boolean = false
     public parm_area: string
