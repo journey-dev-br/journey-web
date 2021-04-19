@@ -23,6 +23,9 @@ import { ArticleButtonComponent } from './components/article-button/article-butt
 import { ArticleShowComponent } from './components/article-show/article-show.component';
 import { ThemeButtonComponent } from './components/theme-button/theme-button.component';
 import { AreaButtonComponent } from './components/area-button/area-button.component';
+import { IconShowComponent } from './components/icon-show/icon-show.component';
+import { NewShowComponent } from './components/new-show/new-show.component';
+import { LevelShowComponent } from './components/level-show/level-show.component';
 
 @NgModule({
     declarations: [
@@ -44,7 +47,10 @@ import { AreaButtonComponent } from './components/area-button/area-button.compon
         ArticleButtonComponent,
         ArticleShowComponent,
         ThemeButtonComponent,
-        AreaButtonComponent
+        AreaButtonComponent,
+        IconShowComponent,
+        NewShowComponent,
+        LevelShowComponent
     ],
     imports: [
         BrowserModule,

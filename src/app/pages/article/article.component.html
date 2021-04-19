@@ -4,34 +4,17 @@
 
         <div *ngIf="!recoverError; else error">
 
-            Mostrar o Artigo aqui...
-            {{ article.title }}
-            {{ article.date }}
-            {{ article.description }}
-<!-- 
-            <div>
-                <div *ngIf="area">
-                    <app-area-button [area]="area"></app-area-button> 
-                </div>
-            </div>
-    
-            <div>
-                <div *ngIf="theme">
-                    {{theme.title}} 
-                </div>
-            </div>
-    
-            <div *ngFor="let article of articles">
-                <a [routerLink]="['/article', article.id ]" class="text-decoration-none">
-                    <div>{{article.id}} {{article.title}}</div>
-                </a>
-            </div>
--->
+            <app-article-button 
+                [article]="article"
+                [isLink]="isLinkArticle">
+            </app-article-button>
+
+            <app-article-show [article]="article"></app-article-show>
 
         </div>
 
         <ng-template #error>
-            <app-process-error></app-process-error>
+            <app-process-error [errorMsg]="errorMsg"></app-process-error>
         </ng-template>
 
     </div>

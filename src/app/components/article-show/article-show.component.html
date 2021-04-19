@@ -1,1 +1,20 @@
-<p>article-show works!</p>
+
+<div class="article-show-container">
+    
+    <div>
+        <div #HTMLArticleContent></div>
+
+        <div (click)="clicou('link do angular')">Clique aqui...</div>
+    </div>
+
+    <div *ngIf="recoverAPI; else loading">
+        <div *ngIf="recoverError">
+            <app-process-error></app-process-error>
+        </div>
+    </div>
+
+    <ng-template #loading>
+        <app-loading></app-loading>
+    </ng-template>
+
+</div>

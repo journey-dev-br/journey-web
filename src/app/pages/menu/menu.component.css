@@ -1,0 +1,41 @@
+
+.menu-divider {
+    background-color: #ffd166;
+    height: 2px;
+}
+
+.menu-container {
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    font-size: calc( 1.3vw + 13px );
+}
+
+.menu-item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-link-a {
+    text-decoration: none;
+    color: #ad2831;
+}
+
+.menu-destak {
+    width: 100%;
+    height: 4px;
+}
+.menu-active {
+    background-color: #fff3b0;
+}
+
+.menu-deactive {
+    background-color: #ffffff;
+}

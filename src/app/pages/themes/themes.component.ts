@@ -6,7 +6,6 @@ import { Theme } from '../../models/theme'
 
 import { ControllerService } from '../../services/controller.service'
 import { AreasService } from '../../services/areas.service'
-import { ThemesService } from '../../services/themes.service'
 
 @Component({
     selector: 'app-themes',
@@ -19,6 +18,7 @@ export class ThemesComponent implements OnInit {
     public showQuantity: boolean = true
     public recoverAPI: boolean = false
     public recoverError: boolean = false
+    public errorMsg: string = ''
     public parm_area: string
     public area: Area = undefined
     public themes: Theme[] = []
@@ -27,7 +27,6 @@ export class ThemesComponent implements OnInit {
         private route: ActivatedRoute,
         private controllerService: ControllerService,
         private areasService: AreasService,
-        private themesService: ThemesService,
     ) { }
 
     ngOnInit(): void {
@@ -35,9 +34,10 @@ export class ThemesComponent implements OnInit {
         this.controllerService.recoverDataAPI(this.resultRecoverAPI.bind(this))
     }
 
-    resultRecoverAPI(get: string = "", success: boolean = false) {
+    resultRecoverAPI(get: string = "", success: boolean = false, errorMsg: string = '') {
         this.recoverAPI = true
         this.recoverError = !success
+        this.errorMsg = errorMsg
         this.area = this.areasService.getArea(this.parm_area)
         this.themes = this.controllerService.getAreaThemes(this.parm_area)
     }

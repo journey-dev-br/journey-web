@@ -24,7 +24,7 @@ export class SearchComponent implements OnInit {
         this.controllerService.recoverDataAPI(this.resultRecoverAPI.bind(this))
     }
 
-    resultRecoverAPI(get: string = "", success: boolean = false) {
+    resultRecoverAPI(get: string = "", success: boolean = false, errorMsg: string = '') {
         console.log("themes> get: ", get, " success: ", success)
         this.recoverAPI = true
         this.recoverError = !success

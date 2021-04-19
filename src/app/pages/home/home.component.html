@@ -6,20 +6,21 @@
 
             <!-- Lista de Areas -->
             <div *ngFor="let area of areas">
-                <app-area-button [area]="area" [isLink]="isLink"></app-area-button> 
+                <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
             </div>
 
             <!-- Lista de Artigos Novos -->
             <div *ngFor="let article of articles">
-                <a [routerLink]="['/article', article.id ]" class="text-decoration-none">
-                    <div>{{article.title}}</div>
-                </a>
+                <app-article-button 
+                    [article]="article"
+                    [isLink]="isLinkArticle">
+                </app-article-button>
             </div>
 
         </div>
 
         <ng-template #error>
-            <app-process-error></app-process-error>
+            <app-process-error [errorMsg]="errorMsg"></app-process-error>
         </ng-template>
     
     </div>

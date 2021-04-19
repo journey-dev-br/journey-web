@@ -15,7 +15,6 @@ export class AreaButtonComponent implements OnInit {
     @Input() area: Area
 
     ngOnInit(): void {
-        console.log("area-button> isLink: ", this.isLink, " eh ", typeof this.isLink)
     }
 
 }

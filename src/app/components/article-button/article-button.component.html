@@ -1,1 +1,50 @@
-<p>article-button works!</p>
+
+<div class="article-button-container">
+
+    <div *ngIf="isLink; else noLink">
+        <a [routerLink]="['/article', article.id ]" class="text-decoration-none">
+            <ng-template [ngTemplateOutlet]="Content"></ng-template>
+        </a>
+    </div>
+
+    <ng-template #noLink>
+        <ng-template [ngTemplateOutlet]="Content"></ng-template>
+    </ng-template>
+
+    <!-- Conteudo do Button -->
+    <ng-template #Content >
+        <div class="article-button-box-top">
+            <div class="article-button-box-icon">
+                <app-icon-show icon='{{article.theme}}'></app-icon-show>
+            </div>
+            <div class="article-button-box-title">
+                <div class="article-button-title">{{article.title}}</div>
+                <div class="article-button-infos">
+                    <div class="article-button-date">
+                        <span>{{article.date | date: 'dd/MM/yyyy'}}</span>
+                        <span> em </span>
+                        <span>{{area.title}}</span>
+                        <span> | </span>
+                        <span>{{theme.title}}</span>
+                    </div>
+                    <div class="article-button-new-level">
+                        <app-new-show *ngIf="article.isNew"></app-new-show>
+                        <app-level-show [level]="article.level"></app-level-show>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article-button-divider"></div>
+        <div class="article-button-footer">
+            <div class="article-button-description">{{article.description}}</div>
+            <div class="article-border-right"></div>
+        </div>
+    </ng-template>    
+
+</div>
+
+
+
+
+
+

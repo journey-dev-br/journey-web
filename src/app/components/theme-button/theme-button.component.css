@@ -3,6 +3,7 @@
     background-color: #ffffff;
     margin: 6px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     border: solid;
     border-width: 2px;

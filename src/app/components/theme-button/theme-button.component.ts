@@ -16,7 +16,6 @@ export class ThemeButtonComponent implements OnInit {
     @Input() showQuantity: boolean
 
     ngOnInit(): void {
-        console.log("theme-button> isLink: ", this.isLink, " eh ", typeof this.isLink)
     }
 
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError, of } from 'rxjs';
-import { retry, catchError, delay } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { retry, delay } from 'rxjs/operators';
 
 import { Theme } from '../models/theme'
 
@@ -23,6 +23,7 @@ export class ThemesService {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     }    
 
+    /*-- Recupera Temas da API --*/
     public getThemesAPI(): Observable<Theme[]> {
         const areasFromCache = this.responseCache.get(URL);
         if (areasFromCache) {
@@ -30,10 +31,7 @@ export class ThemesService {
             return of(areasFromCache);
         }
         const response = this.httpClient.get<Theme[]>(URL)
-            .pipe(
-                retry(2),
-                delay(1000),
-                catchError(this.handleError))
+            .pipe( retry(2) )     // delay(1000),
         response.subscribe(themes => {
             this.themes = themes
             this.responseCache.set(URL, themes)
@@ -41,10 +39,12 @@ export class ThemesService {
         return response
     }
 
+    /*-- Retorna todos os Temas --*/
     public getThemes(): Theme[] {
         return this.themes
     }
 
+    /*-- Retorna um Tema --*/
     public getTheme(name: string): Theme {
         var response: Theme
         for ( let theme of this.themes ) {
@@ -52,17 +52,5 @@ export class ThemesService {
         }
         return response
     }
-
-    /*-- Manipulação de erros --*/
-    handleError(error: HttpErrorResponse) {
-        let errorMessage = ''
-        if (error.error instanceof ErrorEvent) {   // Erro ocorreu no lado do client
-        errorMessage = error.error.message
-        } else {                                   // Erro ocorreu no lado do servidor
-        errorMessage = `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`
-        }
-        console.log(errorMessage)
-        return throwError(errorMessage)
-    }  
 
 }

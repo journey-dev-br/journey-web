@@ -13,9 +13,11 @@ import { ArticlesService } from '../../services/articles.service'
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-    public isLink: boolean = true
+    public isLinkArea: boolean = true
+    public isLinkArticle: boolean = true
     public recoverAPI: boolean = false
     public recoverError: boolean = false
+    public errorMsg: string = ''
     public areas: Area[] = []
     public articles: Article[] = []
 
@@ -29,10 +31,10 @@ export class HomeComponent implements OnInit {
         this.controllerService.recoverDataAPI(this.resultRecoverAPI.bind(this))
     }
 
-    resultRecoverAPI(get: string = "", success: boolean = false) {
-        console.log("themes> get: ", get, " success: ", success)
+    resultRecoverAPI(get: string = "", success: boolean = false, errorMsg: string = '') {
         this.recoverAPI = true
         this.recoverError = !success
+        this.errorMsg = errorMsg
         this.areas = this.areasService.getAreas()
         this.articles = this.articlesService.getNewArticles()
     }

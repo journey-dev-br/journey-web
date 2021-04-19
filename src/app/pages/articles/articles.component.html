@@ -13,7 +13,8 @@
     
             <div>
                 <div *ngIf="theme">
-                    <app-theme-button [theme]="theme" 
+                    <app-theme-button 
+                        [theme]="theme" 
                         [isLink]="isLinkTheme" 
                         [showQuantity]="showQuantity">
                     </app-theme-button>
@@ -21,15 +22,16 @@
             </div>
     
             <div *ngFor="let article of articles">
-                <a [routerLink]="['/article', article.id ]" class="text-decoration-none">
-                    <div>{{article.id}} {{article.title}}</div>
-                </a>
+                <app-article-button 
+                    [article]="article" 
+                    [isLink]="isLinkArticle">
+                </app-article-button>
             </div>
 
         </div>
 
         <ng-template #error>
-            <app-process-error></app-process-error>
+            <app-process-error [errorMsg]="errorMsg"></app-process-error>
         </ng-template>
 
     </div>

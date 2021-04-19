@@ -1,1 +1,11 @@
-<p>menu works!</p>
+
+<div class="menu-container">
+    <div class="menu-item" *ngFor="let item of menu">
+        <div class="menu-link">
+            <a class="menu-link-a" routerLink="{{item.link}}" routerLinkActive="active">{{item.title}}</a>    
+        </div>
+        <div class="menu-destak menu-active" *ngIf="item.active"></div>
+        <div class="menu-destak menu-deactive" *ngIf="!item.active"></div>
+    </div>
+</div>
+<div class="menu-divider"></div>
