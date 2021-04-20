@@ -1,1 +1,83 @@
-<p>help works!</p>
+<div>
+
+    <div *ngIf="recoverAPI; else loading">
+
+        <div *ngIf="!recoverError; else error">
+
+            <!----------------------------- TEMPLATE DO HELP ------------------------------>
+
+            <div class="help-container">
+                <div class="help-view-title">AJUDA</div>
+            
+                <div class="help-description">Este site contem artigos, que estão separados em grupos tematicos conforme o conteúdo do artigo:</div>
+                <div class="help-list-box">
+                    <li class="help-list">CURSOS</li>
+                    <li class="help-list">FERRAMENTAS</li>
+                    <li class="help-list">DICAS</li>
+                    <li class="help-list">PROJETOS</li>
+                    <li class="help-list">VARIEDADES</li>
+                </div>
+                <div class="help-divider"></div>
+            
+                <div class="help-description">Dentro dos grupos tematicos, os artigos estão separados em temas mais específicos, como por exemplo: linguagens, frameworks, ou outros assuntos distintos, sendo alguns exemplos:</div>
+                <div class="help-list-box">
+                    <li class="help-list">Javascript</li>
+                    <li class="help-list">Angular</li>
+                    <li class="help-list">Node JS</li>
+                    <li class="help-list">Internet</li>
+                </div>
+                <div class="help-divider"></div>
+            
+                <div class="help-description">Navegue no site, é bastante intuitivo.</div>
+                <div class="help-divider"></div>
+            
+                <div class="help-view-subtitle">Sobre os artigos:</div>
+                <app-button-article [article]="article"></app-button-article>
+            
+                <div class="help-description">
+                    As estrelas indicam o nível considerado para o Artigo, podendo ser:
+                </div>
+                <div class="help-list-box">
+                    <li class="help-list">
+                        <app-level-show [level]="level_1"></app-level-show> 
+                        Iniciante
+                    </li>
+                    <li class="help-list">
+                        <app-level-show [level]="level_2"></app-level-show>  
+                        Intermediario
+                    </li>
+                    <li class="help-list">
+                        <app-level-show [level]="level_3"></app-level-show> 
+                        Avançado
+                    </li>
+                </div>
+                <div class="help-divider"></div>
+            
+                <div class="help-description">
+                    A palavra <app-new-show></app-new-show> indica que o Artigo é novo no site, uma publicação considerada recente.
+                </div>
+            
+                <div>
+                    <app-article-button 
+                        [article]="article"
+                        [isLink]="isLinkArticle">
+                    </app-article-button>
+                </div>
+            
+            </div>
+
+            <!----------------------------------------------------------------------------->
+
+        </div>
+
+        <ng-template #error>
+            <app-process-error [errorMsg]="errorMsg"></app-process-error>
+        </ng-template>
+    
+    </div>
+
+    <ng-template #loading>
+        <app-loading></app-loading>
+    </ng-template>
+
+</div>

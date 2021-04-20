@@ -1,0 +1,48 @@
+
+.help-container {   
+    margin-top: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.help-view-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    font-family: 'Goldman', cursive;
+    font-size: calc(30px + 2vw);
+    color: #457b9d;
+}
+
+.help-description {
+    font-family: 'Merriweather', serif;
+    font-size: calc(13px + 0.8vw);
+    color: #333;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.help-list-box {
+    padding-left: 30px;
+}
+
+.help-list {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(13px + 0.7vw);
+    color: #293241;
+    display: flex;
+    flex-direction: row;
+}
+
+.help-divider {
+    width: 16px;
+    height: 16px;
+}
+
+.help-view-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: calc(16px + 1.4vw);
+    color: brown;
+}

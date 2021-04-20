@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<div>
+
+    <div *ngIf="recoverAPI; else loading">
+
+        <div *ngIf="!recoverError; else error">
+
+            <!---------------------------- TEMPLATE DO CONTACT ---------------------------->
+
+            <div class="contact-container">
+                <div class="contact-view-title">CONTATO</div>
+            
+                <div class="contact-description">Entre em contato conosco através do email:</div>
+                <div class="contact-box-link">
+                    <img src="assets/imgs/gmail-icon.png" width="64" height="64"> 
+                    <div class="contact-link-text">journey-dev-br@gmail.com</div>
+                </div>
+            
+                <div class="contact-space-h"></div>
+            
+                <div class="contact-description">Acesse também nosso canal no Youtube:</div>
+                <div class="contact-box-link">
+                    <img src="assets/imgs/youtube-icon.png" width="48" height="48"> 
+                    <div class="contact-link-text">youtube/journey-dev-br</div>
+                </div>
+            
+            </div>
+
+            <!----------------------------------------------------------------------------->
+
+        </div>
+
+        <ng-template #error>
+            <app-process-error [errorMsg]="errorMsg"></app-process-error>
+        </ng-template>
+    
+    </div>
+
+    <ng-template #loading>
+        <app-loading></app-loading>
+    </ng-template>
+
+</div>

@@ -1,0 +1,107 @@
+
+.about-container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+}
+
+p {
+    margin: 0;
+    padding-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Merriweather', serif;
+    color: #222222;
+    font-size: calc(12px + 0.9vw);
+}
+
+.about-view-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    font-family: 'Goldman', cursive;
+    font-size: calc(30px + 2vw);
+    color: #457b9d;
+}
+
+.about-title-section {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Goldman', cursive;
+    font-size: calc(18px + 1.4vw);
+    color: #cd1624;
+}
+
+/*--------------------------------------------------------
+                      Style: TITULO
+--------------------------------------------------------*/
+
+.about-title-box {
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title-name {
+    font-family: 'Courgette', cursive;
+    font-size: calc(28px + 2vw);
+}
+
+.about-title-color-br {
+    color: #f5c400;
+}
+
+.about-title-color-journey {
+    color: #ef233c;
+}
+
+.about-title-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(16px + 1.2vw);
+    font-style: italic;
+    color: slategrey;
+}
+
+/*--------------------------------------------------------
+            Style: HISTORIA E OBSERVAÇÃO
+--------------------------------------------------------*/
+
+.about-history {
+    margin-top: 26px;
+}
+
+.about-observation {
+    line-height: 1.6;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-size: calc(11px + 0.8vw);
+    color: #222222;
+}
+
+/*--------------------------------------------------------
+               Style: FERRAMENTA DO SITE
+--------------------------------------------------------*/
+
+.about-tool {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-tool-name {
+    font-family: 'Goldman', cursive;
+    font-size: calc(22px + 1.8vw);
+}
+
+.about-tool-icon {
+    margin-top: 10px;
+    border-radius: 10%;
+}

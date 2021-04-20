@@ -11,8 +11,10 @@ import { ArticlesService } from '../../services/articles.service'
     styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+    public isLinkArticle: boolean = true
     public recoverAPI: boolean = false
     public recoverError: boolean = false
+    public errorMsg: string = ''
     public articles: Article[] = []
 
     constructor(
@@ -25,10 +27,10 @@ export class SearchComponent implements OnInit {
     }
 
     resultRecoverAPI(get: string = "", success: boolean = false, errorMsg: string = '') {
-        console.log("themes> get: ", get, " success: ", success)
         this.recoverAPI = true
         this.recoverError = !success
-        this.articles = this.articlesService.getArticles()
+        this.errorMsg = errorMsg
+        this.articles = this.articlesService.searchArticles('Instalação')
     }
 
 }
