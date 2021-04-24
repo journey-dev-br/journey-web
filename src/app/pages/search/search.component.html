@@ -6,6 +6,46 @@
 
             <!-- ACERTAR PARA A PESQUISA DE ARTIGOS -->
 
+            <div class="search-input-container">
+                <div>
+                    <div class="font-size-6">Font Size 6</div>        
+                    <div class="font-size-7">Font Size 7</div>        
+                    <div class="font-size-8">Font Size 8</div>        
+                    <div class="font-size-9">Font Size 9</div>        
+                    <div class="font-size-10">Font Size 10</div>        
+                    <div class="font-size-11">Font Size 11</div>        
+                    <div class="font-size-12">Font Size 12</div>        
+                    <div class="font-size-13">Font Size 13</div>        
+                    <div class="font-size-14">Font Size 14</div>        
+                    <div class="font-size-15">Font Size 15</div>        
+                    <div class="font-size-16">Font Size 16</div>        
+                    <div class="font-size-17">Font Size 17</div>        
+                    <div class="font-size-18">Font Size 18</div>        
+                    <div class="font-size-19">Font Size 19</div>        
+                    <div class="font-size-20">Font Size 20</div>        
+                    <div class="font-size-21">Font Size 21</div>        
+                    <div class="font-size-22">Font Size 22</div>        
+                    <div class="font-size-23">Font Size 23</div>        
+                    <div class="font-size-24">Font Size 24</div>        
+                    <div class="font-size-25">Font Size 25</div>        
+                    <div class="font-size-26">Font Size 26</div>        
+                    <div class="font-size-27">Font Size 27</div>        
+                    <div class="font-size-28">Font Size 28</div>        
+                    <div class="font-size-29">Font Size 29</div>        
+                    <div class="font-size-30">Font Size 30</div>        
+                </div>
+                <div class="box-search-input">
+                    <input type="text" 
+                        class="search-input font-size-10"
+                        [formControl]="text_search" 
+                        placeholder="texto a pesquisar...">
+                </div>
+                <div>
+                    <div>Pesquisar: </div>
+                    <div *ngFor="let word of list_search">{{word}}</div>
+                </div>
+            </div>
+
             <!-- Lista de Artigos Novos -->
             <div *ngFor="let article of articles">
                 <app-article-button 

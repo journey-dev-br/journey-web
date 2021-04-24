@@ -1,0 +1,32 @@
+
+.page-not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: calc(60px + 6vw);
+    padding-bottom: calc(60px + 6vw);
+}
+
+.page-not-found-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-en {
+    background-color: #ffd60a;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: calc(11px + 1.1vw);
+    font-weight: bold;
+    color: #333333;
+}
+
+.error-pt-br {
+    font-family: 'Goldman', cursive;
+    font-size: calc(10px + 1vw);
+    color: #888888;
+}

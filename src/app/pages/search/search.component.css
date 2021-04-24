@@ -1,0 +1,19 @@
+
+.search-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-search-input {
+    display: flex;
+}
+
+.search-input {
+    width: 100%;
+/*    border-color: #dddddd;
+    border-width: 1px;
+    border-radius: 10px; 
+    font-size: 22px;
+    */
+    padding: 8px;
+}

@@ -5,13 +5,11 @@
 
         <div *ngIf="!recoverError; else error">
 
-            <div>
-                <div *ngIf="area">
+            <div class="articles-area-theme">
+                <div *ngIf="area" class="articles-area">
                     <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
                 </div>
-            </div>
-    
-            <div>
+        
                 <div *ngIf="theme">
                     <app-theme-button 
                         [theme]="theme" 

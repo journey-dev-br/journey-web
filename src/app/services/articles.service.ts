@@ -67,9 +67,14 @@ export class ArticlesService {
         return this.articles.filter( a => a.isNew )
     }
 
-    /*-- Pesquisa Artigos --*/
-    public searchArticles(search: string): Article[] {
-        return this.articles.filter( a => a.isNew )
+    /*-- Pesquisa Artigos por array de Palavras --*/
+    public searchArticlesForWords(search: string[]): Article[] {
+        let listSearch = search.map( w => w.toLowerCase() )
+        return this.articles.filter(article => {
+            let splitTitle = article.title.split(' ')
+            let filteredWords = splitTitle.filter((word) => listSearch.includes(word.toLowerCase()))
+            if ( filteredWords.length > 0 ) { return true } else { return false }
+        })
     }
 
 }

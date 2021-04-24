@@ -1,38 +1,7 @@
 
 .about-container {
-    margin-top: 40px;
-    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
-    min-height: 60vh;
-}
-
-p {
-    margin: 0;
-    padding-bottom: 20px;
-    line-height: 1.6;
-    font-family: 'Merriweather', serif;
-    color: #222222;
-    font-size: calc(12px + 0.9vw);
-}
-
-.about-view-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
-    font-family: 'Goldman', cursive;
-    font-size: calc(30px + 2vw);
-    color: #457b9d;
-}
-
-.about-title-section {
-    margin-top: 36px;
-    display: flex;
-    justify-content: center;
-    font-family: 'Goldman', cursive;
-    font-size: calc(18px + 1.4vw);
-    color: #cd1624;
 }
 
 /*--------------------------------------------------------

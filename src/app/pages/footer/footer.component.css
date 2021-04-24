@@ -26,3 +26,16 @@
     font-size: calc( 1vw + 10px );
     color: #db3a34;
 }
+
+.footer-powered {
+    font-family: 'Goldman', cursive;
+    margin-top: 10px;
+    font-size: calc( 1vw + 8px );
+    color: #9e2a2b;
+}
+
+.footer-copyright {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc( 1vw + 8px );
+    color: #9e2a2b;
+}

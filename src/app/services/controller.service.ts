@@ -131,4 +131,13 @@ export class ControllerService {
         return this.areaThemes.filter( t => t.area == area )
     }
 
+    /*-- Retorna os Temas de uma Area, com a contagem de Artigos --*/
+    public getAreaTheme( area: string, theme: string ): AreaTheme {
+        var response: AreaTheme = undefined
+        this.areaThemes.map( t => { 
+            if ( t.area == area && t.name == theme ) { response = t }
+        })
+        return response
+    }
+
 }

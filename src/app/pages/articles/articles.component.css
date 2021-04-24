@@ -1,4 +1,18 @@
 
 .articles-container {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.articles-area-theme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.articles-area {
+    margin-bottom: 14px;
 }

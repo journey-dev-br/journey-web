@@ -1,19 +1,7 @@
 
 .help-container {   
-    margin-top: 40px;
-    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
-}
-
-.help-view-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 18px;
-    font-family: 'Goldman', cursive;
-    font-size: calc(30px + 2vw);
-    color: #457b9d;
 }
 
 .help-description {
@@ -39,10 +27,4 @@
 .help-divider {
     width: 16px;
     height: 16px;
-}
-
-.help-view-subtitle {
-    font-family: 'Oswald', sans-serif;
-    font-size: calc(16px + 1.4vw);
-    color: brown;
 }

@@ -6,14 +6,12 @@
         <div *ngIf="!recoverError; else error">
 
             <!-- Botão da Area -->
-            <div class="themes-top">
-                <div *ngIf="area">
-                    <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
-                </div>
+            <div *ngIf="area" class="themes-top">
+                <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
             </div>
     
             <!-- Botões dos Temas da Area -->
-            <div *ngFor="let theme of themes">
+            <div *ngFor="let theme of themes" class="themes-list-item">
                 <app-theme-button [theme]="theme" 
                     [isLink]="isLinkTheme" 
                     [showQuantity]="showQuantity">
