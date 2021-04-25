@@ -10,10 +10,31 @@
 
 .search-input {
     width: 100%;
-/*    border-color: #dddddd;
-    border-width: 1px;
-    border-radius: 10px; 
-    font-size: 22px;
-    */
+    font-size: calc(12px + 1.2vw);
     padding: 8px;
+}
+
+.search-icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(10px + 1vw);
+}
+
+.search-box-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(36px + 3.6vw);
+    height: calc(36px + 3.6vw);
+    background-color: #ff595e;
+    border-radius: 50%;
+}
+
+.search-icon {
+    width: calc(30px + 3vw);
+    height: calc(30px + 3vw);
+}
+
+.search-no-articles {
+    min-height: calc(26px + 26vh);
 }

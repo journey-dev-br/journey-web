@@ -1,7 +1,6 @@
 
 .header-container {
     background-color: #ef233c;
-    padding: calc(8px + 0.8vw);
     padding-left: calc(12px + 1.2vw);
     padding-right: calc(12px + 1.2vw);
     display: flex;
@@ -13,6 +12,8 @@
 }
 
 .header-logo {
+    padding-top: calc(8px + 0.8vw);
+    padding-bottom: calc(8px + 0.8vw);
     font-family: 'Courgette', cursive;
     font-size: calc(20px + 2vw);
     font-weight: bold;
@@ -24,5 +25,6 @@
 }
 
 .header-icon {
-    background-color: coral;
+    width: calc(26px + 2.6vw);
+    height: calc(26px + 2.6vw);
 }

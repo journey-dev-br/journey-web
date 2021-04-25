@@ -2,9 +2,11 @@
     <div class="header-logo">
         journey.dev<span class="header-logo-br">.br</span>
     </div>
-    <div class="header-icon">
-        <a [routerLink]="['/search']" class="">
-            SEARCH
-        </a>
+    <div *ngIf="inSearch">
+        <a routerLink="/search" class="text-decoration-none">
+            <div>
+                <img src="assets/imgs/search_white_48dp.png" class="header-icon"> 
+            </div>
+        </a>    
     </div>
 </div>

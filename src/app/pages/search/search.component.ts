@@ -14,6 +14,7 @@ import { ArticlesService } from '../../services/articles.service'
 })
 export class SearchComponent implements OnInit {
     public isLinkArticle: boolean = true
+    public inArticles: boolean = false
     public recoverAPI: boolean = false
     public recoverError: boolean = false
     public errorMsg: string = ''
@@ -49,10 +50,12 @@ export class SearchComponent implements OnInit {
         this.list_search = query.split(' ')
             .filter( w => w.length > 2 )
             .filter(w => !(this.list_no_search.includes(w)) )
+        this.inArticles = false
         if ( this.list_search.length == 0 ) {
             this.articles = []
         } else {
             this.articles = this.articlesService.searchArticlesForWords(this.list_search)
+            if ( this.articles.length > 0 ) { this.inArticles = true }
         }
         return
     }

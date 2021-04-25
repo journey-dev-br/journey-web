@@ -31,7 +31,7 @@ export class AreasService {
             return of(areasFromCache);
         }
         const response = this.httpClient.get<Area[]>(URL)
-            .pipe( retry(2), delay(2000) )     // delay(2000),
+            .pipe( retry(2) )     // delay(2000),
         response.subscribe(areas => {
             this.areas = areas
             this.responseCache.set(URL, areas)
