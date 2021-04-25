@@ -36,6 +36,12 @@ code {
     color: #e63946;
 }
 
+.text-mono {
+    font-family: 'Roboto Mono', monospace;
+    font-size: calc(8px + 0.8vw);
+    color: #3a86ff;
+}
+
 /*-- TITULOS DO ARTIGO --*/
 
 .article-title {

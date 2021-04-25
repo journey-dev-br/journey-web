@@ -75,3 +75,21 @@
     <div class="article-youtube">
         <iframe src="https://www.youtube.com/embed/_SKQZLvBe_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+
+# INCLUSÃO DE TEXTO DINAMICAMENTE:
+# ===============================
+
+# Utilizar o trecho abaixo:       (Obs.: Utiliza a função IncludeTextArticle() do index.html)
+# ------------------------
+
+    <p id="id-html-include"></p>
+    <style onload="IncludeTextArticle(
+    '<span class=&#34; text-mono &#34;>' +
+        'URL.....: ' + window.location.href + '<br>' +
+        'Path....: ' + window.location.pathname + '<br>' +
+        'Host....: ' + window.location.host + '<br>' +
+        'Hostname: ' + window.location.hostname + '<br>' +
+        'Origin..: ' + window.location.origin + '<br>' +
+        'Port....: ' + window.location.port + '<br>' +
+    '</span>'       
+    )"></style>    
