@@ -46,9 +46,11 @@
 
 # **----------   03-DICAS   ----------**
 #  <<<<  001-Angular  >>>>
-    a0300100001.html  Como exibir data no formato DD/MM/AAAA  
-#  <<<<  004-Angular  >>>>
-    a0300400001.html  Exemplo de fonte size responsivo com CSS   
+    a0300100001.html  Como exibir data no formato DD/MM/AAAA com Pipe  
+#  <<<<  002-Javascript  >>>>
+    a0300200001.html  Como recuperar parametros e informações da URL
+#  <<<<  004-CSS  >>>>
+    a0300400001.html  Exemplo de fonte size responsivo com CSS  
 
 # **----------   04-PROJETOS   ----------**
 

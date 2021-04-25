@@ -1,5 +1,45 @@
 
 .process-error-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: calc(60px + 6vw);
+    padding-bottom: calc(60px + 6vw);    
+}
+
+.process-error-box {
+    padding-top: calc(11px + 1.1vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-code {
+    background-color: #ffd60a;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: calc(11px + 1.1vw);
+    font-weight: bold;
+    color: #333333;
+}
+
+.error-message {
+    background-color: #f8f9fa;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #dddddd;
+    padding: 12px;
+    font-family: 'Goldman', cursive;
+    font-size: calc(10px + 1vw);
+    color: #555555;
+}
+
+.process-error-icon {
+    width: calc(40px + 4vw);
+    height:  calc(40px + 4vw);
 }

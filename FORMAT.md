@@ -1,46 +1,77 @@
 
-PARAGRAFOS:
-----------
-Utilizar a tag <p></p>
+# TAGS HTML PARA UTILIZAÇÃO NOS ARTIGOS:
+# =====================================
 
-Formatação especial:
-<b></b>         ... Bold
-<i></i>         ... Italic
-<sub></sub>     ... Subscrito
-<sup></sup>     ... Sobrescrito
-<small></small> ... Texto pequeno
-<code></code>   ... Código computador
+    Utilizar a tag:
+        <p></p>
 
-Link:
-<a href="http://angular.io" target="_blank">Angular</a>
+    Formatação especial:
+        <b></b>         ... Bold
+        <i></i>         ... Italic
+        <sub></sub>     ... Subscrito
+        <sup></sup>     ... Sobrescrito
+        <small></small> ... Texto pequeno
+        <code></code>   ... Código computador (com fundo)
 
+    Link:
+        <a href="https://journey-dev-br.github.io/journey-examples/TipsCssA00001" 
+            target="_blank" class="a-link">Exemplo do Artigo</a>
 
+    Style classes:
+        class="article-title"       ... titulo do artigo
+        class="a-link"              ... para links
 
-CÓDIGO COPIÁVEL:
-===============
+# BOX DE CÓDIGO COPIÁVEL - COPY CODE:
+# ==================================
 
-Utilizar o component <app-copy-code> ... </app-copy-code>
+# Utilizar o trecho abaixo:
+# ------------------------
 
-Para colorir: <span style="color: yellow"></span>
-Cores:
-67cdfe   ... Azul escuro
-e9c46a   ... Amarelo 
-90be6d   ... Verde
-e07a5f   ... Marrom
-ffffff   ... Branco
+    <div class="box-code">
+        <div class="box-text" id="article-text-a0300400001-2">
+    class="font-size-14"<br>
+    class="outro-css font-size-20"
+        </div>
+        <div class="box-icon">
+            <a onclick="CopyTextCode('article-text-a0300400001-2')">
+                <img src="https://journey-dev-br.github.io/journey-api/desenv/icons/content_copy_white_18dp.png" width=18 height=18>
+            </a>
+        </div>
+    </div>  
 
+# Para colorir o código dentro do copy code:
+# ----------------------------------------- 
 
-Para nova linha: <br>
+    <span style="color: yellow"></span>
+    Cores:
+    67cdfe   ... Azul escuro
+    e9c46a   ... Amarelo 
+    90be6d   ... Verde
+    e07a5f   ... Marrom
+    ffffff   ... Branco
 
-Caracteres especiais:
---------------------
-&nbsp;   ... Espaço
-&#35;    ... #
-&#34;    ... "
-&#123;   ... {
-&#125;   ... }
+# Para nova linha: 
+# ---------------
+    <br>
 
-Exemplo:
-<app-copy-code>
-    import &#123; React &#125; from './react'<br>
-</app-copy-code>
+# Caracteres especiais:
+# --------------------
+    &nbsp;   ... Espaço
+    &#35;    ... #
+    &#34;    ... "
+    &#123;   ... {
+    &#125;   ... }
+
+    Exemplo de aplicação no arquivo .html do Artigo:
+        import &#123; React &#125; from './react'<br>
+
+# INCLUSÃO DE VIDEO DO YOUTUBE:
+# ============================
+
+# Utilizar o trecho abaixo:
+# ------------------------
+
+    <p class="article-title">Veja o video deste Artigo</p>
+    <div class="article-youtube">
+        <iframe src="https://www.youtube.com/embed/_SKQZLvBe_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>

@@ -20,18 +20,6 @@ p {
     margin-bottom: calc(12px + 1.2vw);
     font-size: calc(9px + 0.9vw);
 }
-/*
-a {
-    text-decoration: none;
-    color: #e63946;
-}
-*/
-.a-link {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
-    text-decoration: underline;
-    color: #e63946;
-}
 
 code {
     padding-left: 4px;
@@ -39,6 +27,13 @@ code {
     background-color: #dddddd;
     font-size: calc(10px + 1vw);
     border-radius: 6px;
+}
+
+.a-link {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #e63946;
 }
 
 /*-- TITULOS DO ARTIGO --*/

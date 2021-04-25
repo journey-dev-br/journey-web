@@ -19,16 +19,24 @@ export class IconShowComponent implements OnInit {
     ngOnInit(): void {
         switch (this.icon) {
             case "angular":
-                this.urlIcon = "assets/icons/angular-48px.png"
+                this.urlIcon = "assets/tools/angular-48px.png"
                 break;
-            case "nodejs":
-                this.urlIcon = "assets/icons/nodejs-48px.png"
+            case "css":
+                this.radius = "0%"
+                this.urlIcon = "assets/tools/css3.png"
+                break;
+            case "html":
+                this.radius = "0%"
+                this.urlIcon = "assets/tools/html5.png"
                 break;
             case "javascript":
-                this.urlIcon = "assets/icons/javascript-48px.png"
+                this.urlIcon = "assets/tools/javascript-48px.png"
+                break;
+            case "nodejs":
+                this.urlIcon = "assets/tools/nodejs-48px.png"
                 break;
             default:
-                this.urlIcon = "assets/icons/coding-48px.png"
+                this.urlIcon = "assets/tools/coding-48px.png"
                 break;
         }
     }
