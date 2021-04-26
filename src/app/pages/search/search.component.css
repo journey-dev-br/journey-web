@@ -31,8 +31,8 @@
 }
 
 .search-icon {
-    width: calc(30px + 3vw);
-    height: calc(30px + 3vw);
+    width: calc(40px + 4vw);
+    height: calc(40px + 4vw);
 }
 
 .search-no-articles {

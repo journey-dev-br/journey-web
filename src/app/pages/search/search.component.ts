@@ -21,7 +21,7 @@ export class SearchComponent implements OnInit {
 
     public articles: Article[] = []
     public text_search = new FormControl('')
-    private debounce: number = 400;
+    private debounce: number = 800;
     public list_no_search: string[] = []
 
     public list_search: string[] = []

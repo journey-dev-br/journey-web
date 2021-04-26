@@ -32,7 +32,10 @@ export class ArticleService {
     // Obs.: Carrega o artigo dp assets - exemplo: "assets/articles/a0300300001.html"
     private isTestArticle( id: string ): boolean {
         if ( !environment.production ) {
-            if ( id == 'a0300300001' ) { return true }
+            if ( 
+                id == 'a0300300001' || 
+                id == 'a0200100001'  
+            ) { return true }
         }
         return false
     }

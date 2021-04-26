@@ -3,3 +3,8 @@
     display: flex;
     flex-direction: row;
 }
+
+.level-show-icon {
+    width: calc(12px + 1.2vw);
+    height: calc(12px + 1.2vw);
+}

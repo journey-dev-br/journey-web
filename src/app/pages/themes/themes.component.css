@@ -7,7 +7,9 @@
 }
 
 .themes-top {
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .themes-list-item {

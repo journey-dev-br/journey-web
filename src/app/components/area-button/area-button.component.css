@@ -1,21 +1,21 @@
 
 .area-button-container {
     background-color: #dddddd;
-    margin: 10px;
-    margin-left: 14px;
-    margin-right: 14px;
+    margin: calc(8px + 0.8vw);
+    margin-left: calc(10px + 1vw);
+    margin-right: calc(10px + 1vw);
     width: min-content;
-    border-bottom-left-radius: 6px;
+    border-bottom-left-radius: calc(5px + 0.5vw);
     display: flex;
 }
 
 .area-button-text {
     background-color: #ffffff;
     margin-left: 2px;   
-    margin-bottom: 8px;
-    padding-left: 6px;
-    padding-right: 6px;
+    margin-bottom: calc(7px + 0.7vw);
+    padding-left: calc(5px + 0.5vw);
+    padding-right: calc(5px + 0.5vw);
     font-family: 'Goldman', cursive;
-    font-size:  calc( 1.6vw + 16px ); 
+    font-size: calc(16px + 1.6vw); 
     color: #247ba0;
 }

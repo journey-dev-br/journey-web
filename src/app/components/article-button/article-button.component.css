@@ -1,7 +1,7 @@
 
 .article-button-container {
-    margin-top: 26px;
-    margin-bottom: 38px;
+    margin-top: calc(20px + 2vw);
+    margin-bottom: calc(30px + 3vw);
 }
 
 .article-button-box-top {
@@ -30,7 +30,7 @@
     flex: 1;
     line-height: 1;
     font-family: 'Goldman', cursive;
-    font-size:  calc( 1.3vw + 13px );
+    font-size: calc(13px + 1.3vw);
     color: #e63946;
 }
 
@@ -43,7 +43,7 @@
     padding-top: 4px;
     padding-bottom: 4px;
     font-family: 'Roboto', sans-serif;
-    font-size:  calc( 0.8vw + 8px );
+    font-size: calc(8px + 0.8vw);
     font-style: italic;
     color: #444444;
 }
@@ -68,7 +68,7 @@
     padding-top: 4px;
     font-family: 'Merriweather', serif;
     font-style: italic;
-    font-size:  calc( 0.8vw + 8px );
+    font-size:  calc(9px + 0.9vw);
     line-height: 1.5;
     color: #333333
 }

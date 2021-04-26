@@ -71,6 +71,13 @@
 }
 
 .about-tool-icon {
+    width: calc(40px + 4vw);
+    height: calc(40px + 4vw);
     margin-top: 10px;
     border-radius: 10%;
+}
+
+.about-brazil-icon {
+    width: calc(80px + 8vw);
+    height: calc(80px + 8vw);
 }
