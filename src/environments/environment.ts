@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    apiUrl: 'https://journey-dev-br.github.io/journey-api/desenv/',
+    apiUrl: 'https://journey-dev-br.github.io/journey-api/desenv/', 
 };
 
 /*

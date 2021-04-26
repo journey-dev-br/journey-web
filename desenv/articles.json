@@ -1,0 +1,39 @@
+[
+
+    { "id": "a0200100001", "area": "tools", "theme": "angular", "title": "Conhecendo o framework Angular", 
+      "description": "O que é e como o Angular pode lhe ajudar a organizar e ter desempenho no desenvolvimento de seu software para web.",
+      "date": "2021-04-20T18:19:00.000Z", "isNew": false, "level": 1, "last": "", "next": "a0200100002" },
+    { "id": "a0200100002", "area": "tools", "theme": "angular", "title": "As versões do Angular", 
+      "description": "A versão 1 do Angular (Angular JS) e a ruptura a partir da versão 2.",
+      "date": "2021-04-20T18:22:00.000Z", "isNew": false, "level": 1, "last": "a0200100001", "next": "a0200100003" },
+    { "id": "a0200100003", "area": "tools", "theme": "angular", "title": "Instalação do Angular", 
+      "description": "Passo a passo paa instalar e testar o framework Angular no sistema operacional Windows.",
+      "date": "2021-04-20T18:30:00.000Z", "isNew": false, "level": 1, "last": "a0200100002", "next": "a0200100004" },
+    { "id": "a0200100004", "area": "tools", "theme": "angular", "title": "Primeiro App Angular - Hello Word", 
+      "description": "Crie um projeto Angular e realize o primeiro build gerando um Hello Word.",
+      "date": "2021-04-20T18:32:00.000Z", "isNew": false, "level": 1, "last": "a0200100003", "next": "" },
+
+    { "id": "a0200600001", "area": "tools", "theme": "nodejs", "title": "Conhecendo o Node JS e o NPM", 
+      "description": "O que é e para que serve o NodeJS e o repositório do NPM.",
+      "date": "2021-04-20T18:35:00.000Z", "isNew": false, "level": 1, "last": "", "next": "a0200600002" },
+    { "id": "a0200600002", "area": "tools", "theme": "nodejs", "title": "Instalação do Node JS", 
+      "description": "Passo a passo para instalar e testar o Node JS no sistema operacional Windows.",
+      "date": "2021-04-20T18:40:00.000Z", "isNew": false, "level": 1, "last": "a0200600001", "next": "" },
+
+
+      
+
+
+    { "id": "a0300100001", "area": "tips", "theme": "angular", "title": "Como exibir data no formato DD/MM/AAAA com Pipe", 
+      "description": "Como exibir um objeto Date no formato padrão de datas utilizado no Brasil utilizando Pipe do Angular.",
+      "date": "2021-04-20T18:45:00.000Z", "isNew": true, "level": 1, "last": "", "next": "" },
+
+    { "id": "a0300200001", "area": "tips", "theme": "javascript", "title": "Como recuperar parametros e informações da URL", 
+      "description": "Dica prática de como recuperar no código javascript parametros e informações da URL atual com a variável de ambiente window.location.",
+      "date": "2021-04-25T12:10:00.000Z", "isNew": true, "level": 1, "last": "", "next": "" },
+          
+    { "id": "a0300400001", "area": "tips", "theme": "css", "title": "Exemplo de fonte size responsivo com CSS", 
+      "description": "Como implementar tamanho de fonte(font-size) responsivo baseado no tamanho horizontal(width) da tela.",
+      "date": "2021-04-23T11:25:00.000Z", "isNew": true, "level": 2, "last": "", "next": "" }
+        
+]

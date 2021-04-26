@@ -49,6 +49,8 @@
     a0300100001.html  Como exibir data no formato DD/MM/AAAA com Pipe  
 #  <<<<  002-Javascript  >>>>
     (OK) a0300200001.html  Como recuperar parametros e informações da URL
+#  <<<<  003-HTML  >>>>
+    (OK) a0300300001.html  Como abrir um link em uma nova aba do navegador  
 #  <<<<  004-CSS  >>>>
     (OK) a0300400001.html  Exemplo de fonte size responsivo com CSS  
 

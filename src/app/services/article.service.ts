@@ -19,10 +19,22 @@ export class ArticleService {
         
     /*-- Recupera o texto de umn Artigo da API --*/
     public getArticleAPI( id: string ): any {
-        const URL = environment.apiUrl + 'articles/' + id + '.html'  
+        var URL = environment.apiUrl + 'articles/' + id + '.html'  
+        if ( this.isTestArticle(id) ) {
+            URL = 'assets/articles/' + id + '.html'  
+        } 
         const response = this.httpClient.get(URL, {responseType: 'text'})
             .pipe( retry(2) )     // delay(2000),
         return response
+    }
+
+    /*-- Retorna se artigo em teste de desenvolvimento --*/
+    // Obs.: Carrega o artigo dp assets - exemplo: "assets/articles/a0300300001.html"
+    private isTestArticle( id: string ): boolean {
+        if ( !environment.production ) {
+            if ( id == 'a0300300001' ) { return true }
+        }
+        return false
     }
 
 }
