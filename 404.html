@@ -23,18 +23,29 @@
     -->
 
     <script>
+        /*-- Função para incluir dinamicamente testo nos Artigos --*/
+        function IncludeTextArticle(text) {
+            document.getElementById("id-html-include").innerHTML = text
+        }
+
+        /*-- Funções para o Box de CopyCode dos Artigos --*/
         function CopyTextCode(id) {
             var content = document.getElementById(id).innerText
             navigator.clipboard.writeText(content);
         }
-
-        function IncludeTextArticle(text) {
-            document.getElementById("id-html-include").innerHTML = text
+        function clickCopyCode(id,icon) {
+            document.getElementById(icon).innerHTML = `
+                <div class="box-icon">
+                    <a onclick="CopyTextCode('` + id + `')">
+                        <div class="box-icon-img"></div>
+                    </a>
+                </div>
+            `
         }
     </script> 
 
-<link rel="stylesheet" href="styles.0e203c3ce18f73c5f4d5.css"></head>
+<link rel="stylesheet" href="styles.8198c14f98f4c946ca49.css"></head>
 <body>
     <app-root></app-root>
-<script src="runtime.7b63b9fd40098a2e8207.js" defer=""></script><script src="polyfills.94daefd414b8355106ab.js" defer=""></script><script src="main.8cf2c745c2ff1716f0f3.js" defer=""></script></body>
+<script src="runtime.7b63b9fd40098a2e8207.js" defer=""></script><script src="polyfills.94daefd414b8355106ab.js" defer=""></script><script src="main.3510489949c072acd030.js" defer=""></script></body>
 </html>
