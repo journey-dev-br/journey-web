@@ -7,6 +7,8 @@ import { ControllerService } from '../../services/controller.service'
 import { AreasService } from '../../services/areas.service'
 import { ArticlesService } from '../../services/articles.service'
 
+import { environment } from 'src/environments/environment';
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -25,7 +27,9 @@ export class HomeComponent implements OnInit {
         private controllerService: ControllerService,
         private areasService: AreasService,
         private articlesService: ArticlesService
-    ) { }
+    ) { 
+        console.log("journey-web.home> production: ", environment.production)
+    }
 
     ngOnInit(): void {
         this.controllerService.recoverDataAPI(this.resultRecoverAPI.bind(this))
