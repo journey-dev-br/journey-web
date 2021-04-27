@@ -36,10 +36,10 @@
 
 # **----------   02-FERRAMENTAS   ----------**
 #  <<<<  001-Angular  >>>>
-    a0200100001.html  Conhecendo o framework Angular 
-    a0200100002.html  As versões do Angular 
-    a0200100003.html  Instalação do Angular 
-    a0200100004.html  Primeiro App Angular - Hello Word
+   (ok) a0200100001.html  Conhecendo o framework Angular 
+   (ok) a0200100002.html  As versões do Angular 
+   (ok) a0200100003.html  Instalação do Angular 
+   (ok) a0200100004.html  Primeiro App Angular - Hello Word
 #  <<<<  006-Node JS  >>>>
     a0200600001.html  Conhecendo o Node JS 
     a0200600002.html  Instalação do Node JS 
@@ -48,11 +48,11 @@
 #  <<<<  001-Angular  >>>>
     a0300100001.html  Como exibir data no formato DD/MM/AAAA com Pipe  
 #  <<<<  002-Javascript  >>>>
-    (OK) a0300200001.html  Como recuperar parametros e informações da URL
+    () a0300200001.html  Como recuperar parametros e informações da URL
 #  <<<<  003-HTML  >>>>
-    (OK) a0300300001.html  Como abrir um link em uma nova aba do navegador  
+    () a0300300001.html  Como abrir um link em uma nova aba do navegador  
 #  <<<<  004-CSS  >>>>
-    (OK) a0300400001.html  Exemplo de fonte size responsivo com CSS  
+    () a0300400001.html  Exemplo de fonte size responsivo com CSS  
 
 # **----------   04-PROJETOS   ----------**
 

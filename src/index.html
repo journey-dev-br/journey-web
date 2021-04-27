@@ -23,13 +23,24 @@
     -->
 
     <script>
+        /*-- Função para incluir dinamicamente testo nos Artigos --*/
+        function IncludeTextArticle(text) {
+            document.getElementById("id-html-include").innerHTML = text
+        }
+
+        /*-- Funções para o Box de CopyCode dos Artigos --*/
         function CopyTextCode(id) {
             var content = document.getElementById(id).innerText
             navigator.clipboard.writeText(content);
         }
-
-        function IncludeTextArticle(text) {
-            document.getElementById("id-html-include").innerHTML = text
+        function clickCopyCode(id,icon) {
+            document.getElementById(icon).innerHTML = `
+                <div class="box-icon">
+                    <a onclick="CopyTextCode('` + id + `')">
+                        <div class="box-icon-img"></div>
+                    </a>
+                </div>
+            `
         }
     </script> 
 

@@ -36,12 +36,6 @@ code {
     color: #e63946;
 }
 
-.text-mono {
-    font-family: 'Roboto Mono', monospace;
-    font-size: calc(8px + 0.8vw);
-    color: #3a86ff;
-}
-
 /*-- TITULOS DO ARTIGO --*/
 
 .article-title {
@@ -86,13 +80,21 @@ iframe {
 .box-text {
     padding: calc(8px + 0.8vw);
     font-family: monospace, 'Courier New', Courier;
-    font-size: calc(8px + 0.8vw);
+    font-size: calc(9px + 0.9vw);
     line-height: 1.5;
 }
 
 .box-icon {
     color: white;
     padding: 6px;
+}
+
+.box-icon-img {
+    background: url(https://journey-dev-br.github.io/journey-api/desenv/icons/content_copy_white_18dp.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: calc(11px + 1.1vw);
+    height: calc(11px + 1.1vw);
 }
 
 /*=================================*/

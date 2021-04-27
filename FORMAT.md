@@ -27,16 +27,12 @@
 # Utilizar o trecho abaixo:
 # ------------------------
 
+    <!-- Box Copy Code 1 -->
     <div class="box-code">
-        <div class="box-text" id="article-text-a0300400001-2">
-    class="font-size-14"<br>
-    class="outro-css font-size-20"
+        <div class="box-text" id="copy-code-1">
+            ng new app-exemplo
         </div>
-        <div class="box-icon">
-            <a onclick="CopyTextCode('article-text-a0300400001-2')">
-                <img src="https://journey-dev-br.github.io/journey-api/desenv/icons/content_copy_white_18dp.png" width=18 height=18>
-            </a>
-        </div>
+        <div id="icon-copy-1"><style onload="clickCopyCode('copy-code-1','icon-copy-1')"></style></div>
     </div>  
 
 # Para colorir o código dentro do copy code:
@@ -94,7 +90,7 @@
 
     <p id="id-html-include"></p>
     <style onload="IncludeTextArticle(
-    '<span class=&#34; text-mono &#34;>' +
+    '<span class=&#34; box-text &#34;>' +
         'URL.....: ' + window.location.href + '<br>' +
         'Path....: ' + window.location.pathname + '<br>' +
         'Host....: ' + window.location.host + '<br>' +

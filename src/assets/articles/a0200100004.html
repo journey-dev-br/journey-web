@@ -1,0 +1,89 @@
+
+<p class="article-title">Crie seu primeiro app Angular</p>
+
+<p>Abaixo o passo a passo de como criar um app(ou aplicativo) Angular, o que é uma 
+tarefa muito simples, sendo que com apenas um comando você já terá um aplicativo 
+pronto para ser executado.</p>
+
+<p>Abra um terminal de comandos de sua preferência, sendo que no Windows você poderá 
+utilizar o <code>prompt de comando</code> ou <code>cmd</code>. Digite <b>cmd</b> da 
+barra de pesquisa do Windows e clique para abrir o aplicativo.</p>
+
+<p>Você já deverá ter o CLI do Angular instalado em seu computador.<br>
+<i>Dica: digite <b>ng</b> no terminal e será mostrada uma lista de comandos do CLI.</i>
+</p>
+
+<p>No terminal de comandos, navegue até a pasta onde deseja criar seu projeto, e 
+digite o comando abaixo:<br>
+<i>Obs.: O nome do projeto nesse caso será <code>app-exemplo</code>, mas você poderá 
+dar outro nome qualquer ao projeto.</i>
+</p>
+<!-- Box Copy Code 1 -->
+<div class="box-code">
+    <div class="box-text" id="copy-code-1">
+        ng new app-exemplo
+    </div>
+    <div id="icon-copy-1"><style onload="clickCopyCode('copy-code-1','icon-copy-1')"></style></div>
+</div>  
+
+<p>Serão feitas algumas perguntas, que para esse primeiro projeto exemplo você poderá 
+deixar as respostas default, teclando somente ENTER.</p>
+<p>Após isso o CLI fará a baixa e configuração do novo projeto em uma nova pasta que 
+será criada dentro da pasta onde você executou o comando de criação.</p>
+<p>Essa nova pasta terá o mesmo nome do projeto.</p>
+
+<p class="article-title">Testando seu novo App</p>
+
+<p>Para testar o aplicativo criado, entre na pasta do projeto e execute o comando 
+<code>ng serve</code> conforme abaixo, que fará o build(compilação) do projeto e 
+executará um servidor na porta 4200(padrão).</p>
+<!-- Box Copy Code 2 -->
+<div class="box-code">
+    <div class="box-text" id="copy-code-2">
+        cd app-exemplo<br>
+        ng serve -o
+    </div>
+    <div id="icon-copy-2"><style onload="clickCopyCode('copy-code-2','icon-copy-2')"></style></div>
+</div>  
+
+<p>A opção <b>-o</b> do comando <code>ng serve -o</code> significa open, e faz com 
+que seja aberto automaticamente o seu navegador padrão já com a página principal 
+do seu projeto carregada.</p>
+
+<p>Caso isso não aconteça, abra o navegador de sua preferência e digite a URL abaixo 
+na barra de pesquisa:</p>
+<!-- Box Copy Code 3 -->
+<div class="box-code">
+    <div class="box-text" id="copy-code-3">
+        http://localhost:4200/
+    </div>
+    <div id="icon-copy-3"><style onload="clickCopyCode('copy-code-3','icon-copy-3')"></style></div>
+</div>  
+
+<p>Deverá ser mostrada uma página padrão de apresentação que o Angular gerá em todos 
+os novos projetos.</p>
+
+<p>Para "derrubar"(finalizar a execução) o Servidor, digite Controle + C no terminal 
+de comandos, e confirme, mas isso não é necessário fazer, pode deixar o Servidor "rodando".</p>
+
+<p class="article-title">Alterando o seu projeto Angular</p>
+
+<p>Para fazer alterações no projeto, utilize o editor de sua preferencia (eu utilizo o VSCode).</p>
+<p>Abra o arquivo <b>app.component.html</b> que está na pasta <code>src>app></code>.</p>
+<p>Apague todo o código do arquivo, que foi incluído automaticamente pelo Angular, 
+e inclua somente uma tag html com frase simples como a abaixo:</p>
+<!-- Box Copy Code 4 -->
+<div class="box-code">
+    <div class="box-text" id="copy-code-4">
+        &#60;span&#62;Meu Hello Word.&#60;&#47;span&#62;<br>
+    </div>
+    <div id="icon-copy-4"><style onload="clickCopyCode('copy-code-4','icon-copy-4')"></style></div>
+</div>  
+
+<p>Salve os ajustes, e pronto, se o servidor estiver "rodando" você já verá a alteração 
+refletida no navegador, alias, essa é uma excelente opção disponibilizada e que ajuda 
+em muito na produtividade, pois você vai alterando o projeto e testando simultaneamente.<br>
+<i>Obs.: O que acontece é que o servidor identifica que algum arquivo do projeto foi 
+salvo e recarrega a página automaticamente no navegador.</i>
+</p>
+

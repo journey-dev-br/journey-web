@@ -33,8 +33,12 @@ export class ArticleService {
     private isTestArticle( id: string ): boolean {
         if ( !environment.production ) {
             if ( 
-                id == 'a0300300001' || 
-                id == 'a0200100001'  
+                id == 'a0200600001' ||   // Node 
+                id == 'a0200600002' ||   // Node
+                id == 'a0300100001' ||   // Dica
+                id == 'a0300200001' ||   // Dica
+                id == 'a0300400001' ||   // Dica
+                id == 'a020010000e'  
             ) { return true }
         }
         return false

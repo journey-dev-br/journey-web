@@ -4,6 +4,20 @@
 
         <div *ngIf="!recoverError; else error">
 
+            <div class="article-area-theme">
+                <div *ngIf="area" class="article-area">
+                    <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
+                </div>
+        
+                <div *ngIf="theme">
+                    <app-theme-button 
+                        [theme]="theme" 
+                        [isLink]="isLinkTheme" 
+                        [showQuantity]="showQuantity">
+                    </app-theme-button>
+                </div>
+            </div>
+            
             <app-article-button 
                 [article]="article"
                 [isLink]="isLinkArticle">
