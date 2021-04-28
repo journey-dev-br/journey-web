@@ -6,7 +6,7 @@ import { retry, delay } from 'rxjs/operators';
 import { Area } from '../models/area'
 
 import { environment } from 'src/environments/environment';
-const URL = environment.apiUrl + 'areas.json'
+const URL = 'assets/json/areas_' + environment.versionAreas + '.json'
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +17,7 @@ export class AreasService {
 
     constructor(
         private httpClient: HttpClient
-    ) { }
+    ) { console.log("areas.service> URL....: ", URL) }
 
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -27,7 +27,7 @@ export class AreasService {
     public getAreasAPI(): Observable<Area[]> {
         const areasFromCache = this.responseCache.get(URL);
         if (areasFromCache) {
-            this.areas = areasFromCache
+            if ( this.areas.length == 0 ) { this.areas = areasFromCache }
             return of(areasFromCache);
         }
         const response = this.httpClient.get<Area[]>(URL)

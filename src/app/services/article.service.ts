@@ -21,8 +21,9 @@ export class ArticleService {
     public getArticleAPI( id: string ): any {
         var URL = environment.apiUrl + 'articles/' + id + '.html'  
         if ( this.isTestArticle(id) ) {
-            URL = 'assets/articles/' + id + '.html'  
+            var URL = 'assets/desenv/articles/' + id + '.html'  
         } 
+        console.log("article.service> URL..: ", URL)
         const response = this.httpClient.get(URL, {responseType: 'text'})
             .pipe( retry(2) )     // delay(2000),
         return response
@@ -33,12 +34,10 @@ export class ArticleService {
     private isTestArticle( id: string ): boolean {
         if ( !environment.production ) {
             if ( 
-                id == 'a0200600001' ||   // Node 
-                id == 'a0200600002' ||   // Node
-                id == 'a0300100001' ||   // Dica
-                id == 'a0300200001' ||   // Dica
-                id == 'a0300400001' ||   // Dica
-                id == 'a020010000e'  
+                id == 'a020060000z' ||   // Node
+                id == 'a030010000z' ||   // Dica
+                id == 'a030020000z' ||   // Dica
+                id == 'a020010000X'  
             ) { return true }
         }
         return false

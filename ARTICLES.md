@@ -41,18 +41,18 @@
    (ok) a0200100003.html  Instalação do Angular 
    (ok) a0200100004.html  Primeiro App Angular - Hello Word
 #  <<<<  006-Node JS  >>>>
-    a0200600001.html  Conhecendo o Node JS 
-    a0200600002.html  Instalação do Node JS 
+    ----- a0200600001.html  Conhecendo o Node JS 
+   (ok) a0200600002.html  Instalação do Node JS 
 
 # **----------   03-DICAS   ----------**
 #  <<<<  001-Angular  >>>>
-    a0300100001.html  Como exibir data no formato DD/MM/AAAA com Pipe  
+   (ok) a0300100001.html  Como exibir data no formato DD/MM/AAAA com Pipe  
 #  <<<<  002-Javascript  >>>>
-    () a0300200001.html  Como recuperar parametros e informações da URL
+   (ok) a0300200001.html  Como recuperar parametros e informações da URL
 #  <<<<  003-HTML  >>>>
-    () a0300300001.html  Como abrir um link em uma nova aba do navegador  
+   (ok) a0300300001.html  Como abrir um link em uma nova aba do navegador  
 #  <<<<  004-CSS  >>>>
-    () a0300400001.html  Exemplo de fonte size responsivo com CSS  
+   (ok) a0300400001.html  Exemplo de fonte size responsivo com CSS  
 
 # **----------   04-PROJETOS   ----------**
 

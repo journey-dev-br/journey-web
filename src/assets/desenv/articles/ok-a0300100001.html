@@ -1,0 +1,29 @@
+
+<p class="article-title">Exibição de data no formato DD/MM/AAAA</p>
+
+<p>Se você simplesmente exibir uma variável Date sem qualquer formatação, ela será
+apresentada como vemos abaixo:</p>
+
+<!-- Include HTML 1 -->
+<p id="id-html-include-1"></p>
+<style onload="IncludeTextArticle('id-html-include-1',
+'<span class=&#34; &#34;>' +
+    'Data sem formatação:<br>' + (new Date()) + 
+'</span>'       
+)"></style> 
+
+<p>Para que essa mesma data seja exibida no formato DD/MM/AAAA existem muitas maneiras,
+uma delas é utilizar o Pipe <code>date</code> já existente no Angular, conforme no 
+exemplo abaixo:</p>
+
+<!-- Box Copy Code 1 -->
+<div class="box-code">
+    <div class="box-text" id="copy-code-1">
+        &#60;span&#62;{{ new Date() | date: 'dd/MM/yyyy'}}&#60;/span&#62;
+    </div>
+    <div id="icon-copy-1"><style onload="clickCopyCode('copy-code-1','icon-copy-1')"></style></div>
+</div>  
+
+<p>No exemplo acima, onde está o <code>new Date()</code> deverá ser colocada a
+variável que você deseja exibir.</p>
+

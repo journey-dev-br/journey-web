@@ -88,8 +88,8 @@
 # Utilizar o trecho abaixo:       (Obs.: Utiliza a função IncludeTextArticle() do index.html)
 # ------------------------
 
-    <p id="id-html-include"></p>
-    <style onload="IncludeTextArticle(
+    <p id="id-html-include-1"></p>
+    <style onload="IncludeTextArticle('id-html-include-1',
     '<span class=&#34; box-text &#34;>' +
         'URL.....: ' + window.location.href + '<br>' +
         'Path....: ' + window.location.pathname + '<br>' +

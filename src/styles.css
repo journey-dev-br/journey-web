@@ -90,7 +90,7 @@ iframe {
 }
 
 .box-icon-img {
-    background: url(https://journey-dev-br.github.io/journey-api/desenv/icons/content_copy_white_18dp.png) no-repeat;
+    background: url(https://journey-dev-br.github.io/journey-api/icons/content_copy_white_18dp.png) no-repeat;
     background-size: cover;
     background-position: center center;
     width: calc(11px + 1.1vw);

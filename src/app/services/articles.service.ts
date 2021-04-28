@@ -6,7 +6,7 @@ import { retry, delay } from 'rxjs/operators';
 import { Article } from '../models/article'
 
 import { environment } from 'src/environments/environment';
-const URL = environment.apiUrl + 'articles.json'
+const URL = 'assets/json/articles_' + environment.versionArticles + '.json'
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +17,7 @@ export class ArticlesService {
 
     constructor(
         private httpClient: HttpClient
-    ) { }
+    ) { console.log("articles.service> URL.: ", URL) }
 
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })

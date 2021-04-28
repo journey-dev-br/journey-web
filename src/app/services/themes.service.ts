@@ -6,7 +6,7 @@ import { retry, delay } from 'rxjs/operators';
 import { Theme } from '../models/theme'
 
 import { environment } from 'src/environments/environment';
-const URL = environment.apiUrl + 'themes.json'
+const URL = 'assets/json/themes_' + environment.versionThemes + '.json'
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +17,7 @@ export class ThemesService {
 
     constructor(
         private httpClient: HttpClient
-    ) { }
+    ) { console.log("themes.service> URL...: ", URL) }
 
     httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -27,7 +27,7 @@ export class ThemesService {
     public getThemesAPI(): Observable<Theme[]> {
         const areasFromCache = this.responseCache.get(URL);
         if (areasFromCache) {
-            this.themes = areasFromCache
+            if ( this.themes.length == 0 ) { this.themes = areasFromCache }
             return of(areasFromCache);
         }
         const response = this.httpClient.get<Theme[]>(URL)
