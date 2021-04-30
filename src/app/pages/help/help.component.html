@@ -9,23 +9,26 @@
             <div class="help-container">
                 <div class="major-title">AJUDA</div>
             
-                <div class="help-description">Este site contem artigos, que estão separados em grupos tematicos conforme o conteúdo do artigo:</div>
+                <div class="help-description">Este site contem artigos, que estão separados em <b>Áreas</b> tematicas conforme o conteúdo do artigo:</div>
                 <div class="help-list-box">
-                    <li class="help-list">CURSOS</li>
-                    <li class="help-list">FERRAMENTAS</li>
-                    <li class="help-list">DICAS</li>
-                    <li class="help-list">PROJETOS</li>
-                    <li class="help-list">VARIEDADES</li>
+                    <!-- Lista de Areas -->
+                    <div *ngFor="let area of areas">
+                        <app-area-button [area]="area" [isLink]="isLink"></app-area-button> 
+                    </div>
                 </div>
                 <div class="help-divider"></div>
             
-                <div class="help-description">Dentro dos grupos tematicos, os artigos estão separados em temas mais específicos, como por exemplo: linguagens, frameworks, ou outros assuntos distintos, sendo alguns exemplos:</div>
+                <div class="help-description">Dentro das Áreas tematicas, os artigos estão separados em <b>Temas</b> mais específicos, como por exemplo: linguagens, frameworks, ou outros assuntos distintos, sendo alguns exemplos:</div>
                 <div class="help-list-box">
-                    <li class="help-list">Javascript</li>
-                    <li class="help-list">Angular</li>
-                    <li class="help-list">Node JS</li>
-                    <li class="help-list">Internet</li>
+                    <!-- Botões dos Temas da Area -->
+                    <div *ngFor="let theme of area_themes">
+                        <app-theme-button [theme]="theme" 
+                            [isLink]="isLink" 
+                            [showQuantity]="showQuantity">
+                        </app-theme-button>
+                    </div>
                 </div>
+                <div class="help-description">Obs.: O número que aparece no botão do Tema é a quantidade de artigos publicados para aquele tema na área tematica selecionada.</div>
                 <div class="help-divider"></div>
             
                 <div class="help-description">Navegue no site, é bastante intuitivo.</div>
@@ -60,7 +63,7 @@
                 <div>
                     <app-article-button 
                         [article]="article"
-                        [isLink]="isLinkArticle">
+                        [isLink]="isLink">
                     </app-article-button>
                 </div>
             

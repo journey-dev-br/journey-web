@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Theme } from '../../models/theme'
+import { AreaTheme } from '../../models/area-theme'
 
 @Component({
     selector: 'app-theme-button',
@@ -12,7 +12,7 @@ export class ThemeButtonComponent implements OnInit {
     constructor() { }
 
     @Input() isLink: boolean
-    @Input() theme: Theme
+    @Input() theme: AreaTheme
     @Input() showQuantity: boolean
 
     ngOnInit(): void {

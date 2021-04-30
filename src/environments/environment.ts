@@ -5,7 +5,6 @@
 export const environment = {
     production: false,
     apiUrl: 'https://journey-dev-br.github.io/journey-api/', 
-    testUrl: 'assets/',
     versionAreas: 'v0001',
     versionThemes: 'v0001',
     versionArticles: 'v0001'

@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Area } from '../../models/area'
+import { Theme } from '../../models/theme'
 import { Article } from '../../models/article'
+import { AreaTheme } from '../../models/area-theme'
 
+import { AreasService } from '../../services/areas.service'
+import { ThemesService } from '../../services/themes.service'
 import { ControllerService } from '../../services/controller.service'
 
 @Component({
@@ -13,7 +18,11 @@ export class HelpComponent implements OnInit {
     public recoverAPI: boolean = false
     public recoverError: boolean = false
     public errorMsg: string = ''
-    public isLinkArticle: boolean = false
+    public areas: Area[] = []
+    public themes: Theme[] = []
+    public area_themes: AreaTheme[] = []
+    public showQuantity: boolean = true
+    public isLink: boolean = false
     public level_1: number = 1
     public level_2: number = 2
     public level_3: number = 3
@@ -32,6 +41,8 @@ export class HelpComponent implements OnInit {
 
     constructor(
         private controllerService: ControllerService,
+        private areasService: AreasService,
+        private themesService: ThemesService
     ) { }
 
     ngOnInit(): void {
@@ -42,6 +53,28 @@ export class HelpComponent implements OnInit {
         this.recoverAPI = true
         this.recoverError = !success
         this.errorMsg = errorMsg
+        this.areas = this.areasService.getAreas()
+        this.themes = this.themesService.getThemes()
+        let i = 0
+        this.themes.map( t => {
+            i++
+            this.setAreaThemes( '', t.name, t.title, i )
+        })
+    }
+
+    private setAreaThemes(
+        area: string,
+        name: string,
+        title: string,
+        quantity: number
+    ): void {
+        this.area_themes.push({
+            area,
+            name,
+            title,
+            quantity,
+        })
     }
 
 }
+
