@@ -55,11 +55,13 @@ export class HelpComponent implements OnInit {
         this.errorMsg = errorMsg
         this.areas = this.areasService.getAreas()
         this.themes = this.themesService.getThemes()
-        let i = 0
-        this.themes.map( t => {
-            i++
-            this.setAreaThemes( '', t.name, t.title, i )
-        })
+        if ( this.area_themes.length == 0 ) {
+            let i = 0
+            this.themes.map( t => {
+                i++
+                this.setAreaThemes( '', t.name, t.title, i )
+            })
+        } 
     }
 
     private setAreaThemes(

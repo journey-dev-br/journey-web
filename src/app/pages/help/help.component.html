@@ -38,20 +38,26 @@
                 <app-button-article [article]="article"></app-button-article>
             
                 <div class="help-description">
+                    O botão ou cabeçalho do Artigo (vide abaixo), além do titulo e de uma descrição mais detalhada, 
+                    contém a data em que o Artigo foi publicado ou da sua última atualização, e também 
+                    a que Área e Tema pertence. 
+                </div>
+
+                <div class="help-description">
                     As estrelas indicam o nível considerado para o Artigo, podendo ser:
                 </div>
                 <div class="help-list-box">
                     <li class="help-list">
                         <app-level-show [level]="level_1"></app-level-show> 
-                        Iniciante
+                        &nbsp;&nbsp;Iniciante
                     </li>
                     <li class="help-list">
                         <app-level-show [level]="level_2"></app-level-show>  
-                        Intermediario
+                        &nbsp;&nbsp;Intermediario
                     </li>
                     <li class="help-list">
                         <app-level-show [level]="level_3"></app-level-show> 
-                        Avançado
+                        &nbsp;&nbsp;Avançado
                     </li>
                 </div>
                 <div class="help-divider"></div>

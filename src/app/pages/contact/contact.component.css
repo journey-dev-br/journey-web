@@ -15,3 +15,13 @@
 .contact-space-h {
     height: 20px;
 }
+
+.contact-icon-gmail {
+    width: calc(80px + 8vw);
+    height: calc(56px + 5.6vw);
+}
+
+.contact-icon-youtube {
+    width: calc(60px + 6vw);
+    height: calc(44px + 4.4vw);
+}

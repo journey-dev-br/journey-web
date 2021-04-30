@@ -20,8 +20,8 @@
 #   para
     "outputPath": "dist",
 
-# INSTALAÇÃO INICIAL DO GH-PAGES:
-# ==============================
+# COMANDOS NÃO MAIS UTILIZADOS:
+# ============================
 
 # Gerando um build para o deploy no GitHub Pages:
     ng build --prod --base-href "https://journey-dev-br.github.io/journey-web/"

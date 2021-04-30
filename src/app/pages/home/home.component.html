@@ -5,8 +5,10 @@
         <div *ngIf="!recoverError; else error">
 
             <!-- Lista de Areas -->
-            <div *ngFor="let area of areas" class="home-list-areas">
-                <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
+            <div class="home-list-areas">
+                <div *ngFor="let area of areas">
+                    <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
+                </div>
             </div>
 
             <!-- Lista de Artigos Novos -->
