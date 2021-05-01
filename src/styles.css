@@ -82,6 +82,7 @@ iframe {
     font-family: monospace, 'Courier New', Courier;
     font-size: calc(9px + 0.9vw);
     line-height: 1.5;
+    word-break: break-all;
 }
 
 .box-icon {

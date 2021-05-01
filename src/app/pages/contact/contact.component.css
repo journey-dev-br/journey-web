@@ -17,11 +17,18 @@
 }
 
 .contact-icon-gmail {
-    width: calc(80px + 8vw);
+    width: calc(70px + 7vw);
     height: calc(56px + 5.6vw);
 }
 
 .contact-icon-youtube {
-    width: calc(60px + 6vw);
+    width: calc(50px + 5vw);
     height: calc(44px + 4.4vw);
 }
+
+.contact-icon-linkedin {
+    width: calc(44px + 4.4vw);
+    height: calc(44px + 4.4vw);
+    margin-bottom: 10px;
+}
+
