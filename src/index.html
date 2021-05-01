@@ -33,11 +33,10 @@
             var content = document.getElementById(id).innerText
             // navigator.clipboard.writeText(content);
             navigator.clipboard.writeText(content).then(function() {
-                console.log("index> Copia com sucesso...")
+                showSnackBarCopy("texto copiado...")
             }, function() {
-                console.log("index> Copia falhou...")
+                showSnackBarCopy("erro ao copiar o texto...")
             });
-
         }
         function clickCopyCode(id,icon) {
             document.getElementById(icon).innerHTML = `
@@ -46,7 +45,14 @@
                         <div class="box-icon-img"></div>
                     </a>
                 </div>
+                <div id="snackbar"></div>
             `
+        }
+        function showSnackBarCopy(text) {
+            var x = document.getElementById("snackbar");
+            x.innerText = text
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
         }
     </script> 
 

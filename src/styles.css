@@ -97,6 +97,55 @@ iframe {
     height: calc(11px + 1.1vw);
 }
 
+/*===================================*/
+/*==    STYLES PARA O SNACK BAR    ==*/
+/*===================================*/
+/* Obs.: Em uso no index.html */
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #ef233c;
+    color: #ffffff;
+    text-align: center;
+    border-radius: calc(10px + 1vw);
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: calc(10px + 1vw);
+    font-family: 'Merriweather', serif;
+}
+  
+#snackbar.show {
+    opacity: 0.85;
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 0.85;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 0.85;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 0.85;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 0.85;}
+    to {bottom: 0; opacity: 0;}
+  }
+
 /*=================================*/
 /*==    STYLES PARA USO GERAL    ==*/
 /*=================================*/
@@ -145,3 +194,6 @@ iframe {
 .font-size-28 { font-size: calc(28px + 2.8vw) }
 .font-size-29 { font-size: calc(29px + 2.9vw) }
 .font-size-30 { font-size: calc(30px + 3vw) }
+
+
+
