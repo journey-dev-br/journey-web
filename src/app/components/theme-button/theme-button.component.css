@@ -9,6 +9,13 @@
     border-width: 2px;
     border-color: #dedede;
     border-radius: 10px;
+    transition: 1s ease-out;
+    cursor: pointer;
+}
+
+.theme-button-container:hover {
+    background-color: #efefef;
+    transition: 1s ease-out;
 }
 
 .theme-button-left {

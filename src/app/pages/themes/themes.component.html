@@ -1,33 +1,14 @@
-
 <div class="themes-container">
 
-    <div *ngIf="recoverAPI; else loading">
-
-        <div *ngIf="!recoverError; else error">
-
-            <!-- Botão da Area -->
-            <div *ngIf="area" class="themes-top">
-                <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
-            </div>
-    
-            <!-- Botões dos Temas da Area -->
-            <div *ngFor="let theme of themes" class="themes-list-item">
-                <app-theme-button [theme]="theme" 
-                    [isLink]="isLinkTheme" 
-                    [showQuantity]="showQuantity">
-                </app-theme-button>
-            </div>
-
-        </div>
-
-        <ng-template #error>
-            <app-process-error [errorMsg]="errorMsg"></app-process-error>
-        </ng-template>
-
+    <!-- Botão da Area -->
+    <div *ngIf="area" class="themes-top">
+        <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button>
     </div>
 
-    <ng-template #loading>
-        <app-loading></app-loading>
-    </ng-template>
+    <!-- Botões dos Temas da Area -->
+    <div *ngFor="let theme of themes" class="themes-list">
+        <app-theme-button [theme]="theme" [isLink]="isLinkTheme" [showQuantity]="showQuantity">
+        </app-theme-button>
+    </div>
 
 </div>

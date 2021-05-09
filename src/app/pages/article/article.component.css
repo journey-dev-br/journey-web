@@ -1,6 +1,7 @@
 
 .article-container {
-    display: flex;    
+    display: flex; 
+    flex-direction: column;   
 }
 
 .article-area-theme {

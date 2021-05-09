@@ -1,34 +1,16 @@
 <div>
 
-    <div *ngIf="recoverAPI; else loading">
-
-        <div *ngIf="!recoverError; else error">
-
-            <!-- Lista de Areas -->
-            <div class="home-list-areas">
-                <div *ngFor="let area of areas">
-                    <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
-                </div>
-            </div>
-
-            <!-- Lista de Artigos Novos -->
-            <div *ngFor="let article of articles">
-                <app-article-button 
-                    [article]="article"
-                    [isLink]="isLinkArticle">
-                </app-article-button>
-            </div>
-
+    <!-- Lista de Areas -->
+    <div class="home-list-areas">
+        <div *ngFor="let area of areas">
+            <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button>
         </div>
-
-        <ng-template #error>
-            <app-process-error [errorMsg]="errorMsg"></app-process-error>
-        </ng-template>
-    
     </div>
 
-    <ng-template #loading>
-        <app-loading></app-loading>
-    </ng-template>
+    <!-- Lista de Artigos Novos -->
+    <div *ngFor="let article of articles">
+        <app-article-button [article]="article" [isLink]="isLinkArticle">
+        </app-article-button>
+    </div>
 
 </div>

@@ -18,4 +18,12 @@
     font-family: 'Goldman', cursive;
     font-size: calc(16px + 1.6vw); 
     color: #247ba0;
+    transition: 1s ease-out;
+    cursor: pointer;
+}
+
+.area-button-text:hover {
+    background-color: #efefef;
+    color: #3d5a80;
+    transition: 1s ease-out;
 }

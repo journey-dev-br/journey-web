@@ -20,12 +20,21 @@
 
 .menu-link {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 4px;
 }
 
 .menu-link-a {
+    padding: 1px 8px 3px 8px;
+    border-radius: 8px;
     text-decoration: none;
     color: #ad2831;
+    cursor: pointer;
+    transition: 1s ease-out;
+}
+
+.menu-link-a:hover {
+    background-color: rgba(201, 76, 76, 0.1);
+    transition: 1s ease-out;
 }
 
 .menu-destak {

@@ -33,58 +33,7 @@ export class ControllerService {
 
     /*-- Recupera as Areas, Temas e Artigos --*/
     public recoverDataAPI(resultRecoverAPI: Function) {
-
-        /*-- Aciona API das Areas --*/
-        this.areasService.getAreasAPI()
-            .pipe( catchError(error => {
-                    if (error.error instanceof ErrorEvent) {
-                        this.errorMsg = `Error: ${error.error.message}`;
-                    } else {
-                        this.errorMsg = `Error: ${error.message}`;
-                    }
-                    console.log(this.errorMsg)
-                    return of([])
-            }) )
-            .subscribe(response => {
-                this.areas = response
-                this.inGetAreas = true
-                this.checksResult(resultRecoverAPI, "areas")
-            })
-
-        /*-- Aciona API dos Temas --*/
-        this.themesService.getThemesAPI()
-            .pipe( catchError(error => {
-                if (error.error instanceof ErrorEvent) {
-                    this.errorMsg = `Error: ${error.error.message}`;
-                } else {
-                    this.errorMsg = `Error: ${error.message}`;
-                }
-                console.log(this.errorMsg)
-                return of([])
-                }) )
-            .subscribe(response => {
-                this.themes = response
-                this.inGetThemes = true
-                this.checksResult(resultRecoverAPI, "themes")
-            })
-
-        /*-- Aciona API dos Artigos --*/
-        this.articlesService.getArticlesAPI()
-            .pipe( catchError(error => {
-                if (error.error instanceof ErrorEvent) {
-                    this.errorMsg = `Error: ${error.error.message}`;
-                } else {
-                    this.errorMsg = `Error: ${error.message}`;
-                }
-                console.log(this.errorMsg)
-                return of([])
-                }) )
-            .subscribe(response => {
-                this.articles = response
-                this.inGetArticles = true
-                this.checksResult(resultRecoverAPI, "articles")
-            })
-
+            
     }
 
     /*-- Verifica o resultado dos Gets das APIs --*/
@@ -131,7 +80,7 @@ export class ControllerService {
         return this.areaThemes.filter( t => t.area == area )
     }
 
-    /*-- Retorna os Temas de uma Area, com a contagem de Artigos --*/
+    /*-- Retorna um Tema de uma Area, com a contagem de Artigos --*/
     public getAreaTheme( area: string, theme: string ): AreaTheme {
         var response: AreaTheme = undefined
         this.areaThemes.map( t => { 

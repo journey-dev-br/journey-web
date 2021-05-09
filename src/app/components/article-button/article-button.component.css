@@ -1,7 +1,18 @@
 
 .article-button-container {
+    background-color: #ffffff;
     margin-top: calc(20px + 2vw);
     margin-bottom: calc(30px + 3vw);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    transition: 1s ease-out;
+}
+
+.article-button-container:hover {
+    background-color: #f5f5f5;
+    transition: 1s ease-out;
 }
 
 .article-button-box-top {
@@ -9,7 +20,7 @@
 }
 
 .article-button-box-icon {
-    background-color: #efefef;
+    background-color: #e0e0e0;
     padding-top: 12px;
     padding-left: 8px;
     padding-right: 8px;
@@ -23,6 +34,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    padding-right: 4px;
 }
 
 .article-button-title {
@@ -55,7 +67,7 @@
 }
 
 .article-button-divider {
-    background-color: #efefef;
+    background-color: #e0e0e0;
     height: 1px;
 }
 
@@ -66,6 +78,8 @@
 
 .article-button-description {
     padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
     font-family: 'Merriweather', serif;
     font-style: italic;
     font-size:  calc(9px + 0.9vw);
@@ -74,7 +88,7 @@
 }
 
 .article-border-right {
-    background-color: #efefef;
+    background-color: #e0e0e0;
     width: 4px;
     height: auto;
     margin-left: 12px;

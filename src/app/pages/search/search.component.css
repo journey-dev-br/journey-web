@@ -36,5 +36,11 @@
 }
 
 .search-no-articles {
-    min-height: calc(26px + 26vh);
+    min-height: calc(20px + 20vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(10px + 1vw);
+    color: #e63946;
+    font-family: 'Oswald', sans-serif;
 }

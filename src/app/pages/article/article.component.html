@@ -1,41 +1,21 @@
 <div class="article-container">
 
-    <div *ngIf="recoverAPI; else loading">
-
-        <div *ngIf="!recoverError; else error">
-
-            <div class="article-area-theme">
-                <div *ngIf="area" class="article-area">
-                    <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button> 
-                </div>
-        
-                <div *ngIf="theme">
-                    <app-theme-button 
-                        [theme]="theme" 
-                        [isLink]="isLinkTheme" 
-                        [showQuantity]="showQuantity">
-                    </app-theme-button>
-                </div>
-            </div>
-            
-            <app-article-button 
-                [article]="article"
-                [isLink]="isLinkArticle">
-            </app-article-button>
-
-            <app-article-show [article]="article"></app-article-show>
-
+    <div class="article-area-theme">
+        <div *ngIf="area" class="article-area">
+            <app-area-button [area]="area" [isLink]="isLinkArea"></app-area-button>
         </div>
 
-        <ng-template #error>
-            <app-process-error [errorMsg]="errorMsg"></app-process-error>
-        </ng-template>
-
+        <div *ngIf="theme">
+            <app-theme-button [theme]="theme" [isLink]="isLinkTheme" [showQuantity]="showQuantity">
+            </app-theme-button>
+        </div>
     </div>
 
-    <ng-template #loading>
-        <app-loading></app-loading>
-    </ng-template>
+    <app-article-button 
+        [article]="article" 
+        [isLink]="isLinkArticle">
+    </app-article-button>
+
+    <app-article-show [article]="article"></app-article-show>
 
 </div>
-

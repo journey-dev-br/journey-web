@@ -1,49 +1,28 @@
 <div>
 
-    <div *ngIf="recoverAPI; else loading">
-
-        <div *ngIf="!recoverError; else error">
-
-            <!-- ACERTAR PARA A PESQUISA DE ARTIGOS -->
-            <div class="search-icon-container">
-                <div class="search-box-icon">
-                    <img src="assets/icons/search_flat_128.png" class="search-icon"> 
-                </div>
-            </div>
-
-            <div class="search-input-container">
-                <div class="box-search-input">
-                    <input type="text" autofocus #myInput
-                        class="search-input font-size-10"
-                        [formControl]="text_search" 
-                        placeholder="texto a pesquisar...">
-                    {{ myInput.focus() }}    
-                </div>
-            </div>
-
-            <!-- Lista de Artigos Novos -->
-            <div *ngIf="inArticles; else noArticles">
-                <div *ngFor="let article of articles">
-                    <app-article-button 
-                        [article]="article"
-                        [isLink]="isLinkArticle">
-                    </app-article-button>
-                </div>
-            </div>
-            <ng-template #noArticles>
-                <div class="search-no-articles"> </div>
-            </ng-template>
-
+    <div class="search-icon-container">
+        <div class="search-box-icon">
+            <img src="assets/icons/search_flat_128.png" class="search-icon">
         </div>
-
-        <ng-template #error>
-            <app-process-error [errorMsg]="errorMsg"></app-process-error>
-        </ng-template>
-    
     </div>
 
-    <ng-template #loading>
-        <app-loading></app-loading>
+    <div class="search-input-container">
+        <div class="box-search-input">
+            <input type="text" autofocus #myInput class="search-input font-size-10" [formControl]="text_search"
+                placeholder="texto a pesquisar...">
+            {{ myInput.focus() }}
+        </div>
+    </div>
+
+    <!-- Lista de Artigos Novos -->
+    <div *ngIf="inWords; else noArticles">
+        <div *ngFor="let article of articles">
+            <app-article-button [article]="article" [isLink]="isLinkArticle">
+            </app-article-button>
+        </div>
+    </div>
+    <ng-template #noArticles>
+        <div class="search-no-articles">NENHUM ARTIGO ENCONTRADO</div>
     </ng-template>
 
 </div>

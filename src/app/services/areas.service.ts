@@ -1,42 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { retry, delay } from 'rxjs/operators';
 
 import { Area } from '../models/area'
-
-import { environment } from 'src/environments/environment';
-const URL = 'assets/json/areas_' + environment.versionAreas + '.json'
 
 @Injectable({
     providedIn: 'root'
 })
 export class AreasService {
-    public responseCache = new Map();
     public areas: Area[] = []
 
     constructor(
-        private httpClient: HttpClient
-    ) { console.log("areas.service> URL....: ", URL) }
+    ) { 
+        this.setArea( "courses" , "CURSOS")
+        this.setArea( "tools" , "FERRAMENTAS")
+        this.setArea( "tips" , "DICAS")
+        this.setArea( "projects" , "PROJETOS")
+        this.setArea( "varieties" , "VARIEDADES")
+    }
 
-    httpOptions = {
-        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    }    
-
-    /*-- Recupera Areas da API --*/
-    public getAreasAPI(): Observable<Area[]> {
-        const areasFromCache = this.responseCache.get(URL);
-        if (areasFromCache) {
-            if ( this.areas.length == 0 ) { this.areas = areasFromCache }
-            return of(areasFromCache);
-        }
-        const response = this.httpClient.get<Area[]>(URL)
-            .pipe( retry(2) )     // delay(2000),
-        response.subscribe(areas => {
-            this.areas = areas
-            this.responseCache.set(URL, areas)
-        })
-        return response
+    public setArea( name: string, title: string ): void {
+        this.areas.push({ name, title })
     }
 
     /*-- Retorna todas as Areas --*/

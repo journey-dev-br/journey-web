@@ -49,8 +49,4 @@ export class ArticleShowComponent implements OnInit, AfterViewInit {
         })        
     }
 
-    public clicou(link: string): void {
-        console.log("*** Clicou no link ", link, " ***")
-    }
-
 }
