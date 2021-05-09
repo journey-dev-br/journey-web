@@ -1,70 +1,57 @@
-<div>
+<div class="about-container">
+    <div class="major-title">SOBRE</div>
 
-    <div *ngIf="recoverAPI; else loading">
-
-        <div *ngIf="!recoverError; else error">
-
-            <!----------------------------- TEMPLATE DO ABOUT ----------------------------->
-
-            <div class="about-container">
-                <div class="major-title">SOBRE</div>
-            
-                <div class="about-title-box">
-                    <div class="about-title-name">
-                        <span class="about-title-color-journey">journey.dev</span>
-                        <span class="about-title-color-br">.br</span>
-                    </div>
-                </div>
-            
-                <div class="sub-title">Motivação:</div>
-            
-                <div class="about-history">
-                    <p>Este site é fruto de um desejo de compartilhar conhecimento, e principalmente de ajudar novos desenvolvedores nos seus primeiros passos nessa área.</p>
-                    <p>Quanto eu digitei as minhas primeiras linhas de código, por volta de 1984, ainda não havia internet, e o conhecimento era adquirido através de algum curso ou de livros, ambos na época escassos e de difícil acesso para um candidato a <i>developer</i> de uma pequena cidade do interior do Estado de São Paulo.</p>
-                    <p>Minha primeira tentativa de desenvolver um aplicativo para contabilidade, utilizando um TK2000 que comprei na época (1984), por sinal muito caro, não logrou exito, pois o equipamento que eu tinha para armazenar os dados (para o que atualmente utilizamos HD, SSD, etc) era um gravador de fitas cassete, o que me fez desistir, porque esse sistema de armazenamento era muito falho.</p>
-                    <p>Por fim, no início dos anos 1990, devido a aquisição de um microcomputador XT pela empresa onde eu trabalhava, é que eu consegui realmente iniciar minha jornada de desenvolvedor, utilizando as ferramentas de desenvolvimento DBase e Clipper.</p>
-                    <p>Atualmente trabalho na área de desenvolvimento de software em um grande conglomerado brasileiro, que possui talvez o maior parque tecnológico da América Latina.</p>
-                </div>
-            
-                <div class="about-observation">Obs.: Alguns dos termos que utilizei acima, como TK2000, XT, DBase, Clipper, são antigos, se quiser saber mais procure no nosso amigo Google.</div>
-            
-                <div class="sub-title">Ferramenta:</div>
-            
-                <div class="about-tool">
-                    <div class="about-title-description">Site desenvolvido com</div>
-                    <div>
-                        <img src="assets/tools/angular-48px.png" class="about-tool-icon"> 
-                    </div>
-                    <div class="about-tool-name">Angular</div>
-                </div>
-
-                <div class="sub-title">Desenvolvimento:</div>
-            
-                <div class="about-tool">
-                    <div class="about-title-description">Desenvolvedor</div>
-                    <div class="about-tool-name">Nivaldo Hydalgo</div>
-                    <div class="about-title-description">Produzido no</div>
-                    <div class="about-tool-name">Brasil</div>
-                    <div>
-                        <img src="assets/imgs/brazil.png" class="about-brazil-icon"> 
-                    </div>
-                </div>
-            
-            </div>
-
-            <!----------------------------------------------------------------------------->
-
+    <div class="about-title-box">
+        <div class="about-title-name">
+            <span class="about-title-color-journey">journey.dev</span>
+            <span class="about-title-color-br">.br</span>
         </div>
-
-        <ng-template #error>
-            <app-process-error [errorMsg]="errorMsg"></app-process-error>
-        </ng-template>
-    
     </div>
 
-    <ng-template #loading>
-        <app-loading></app-loading>
-    </ng-template>
+    <div class="sub-title">Motivação:</div>
+
+    <div class="about-history">
+        <p>Este site é fruto de um desejo de compartilhar conhecimento, e principalmente de ajudar novos
+            desenvolvedores nos seus primeiros passos nessa área.</p>
+        <p>Quanto eu digitei as minhas primeiras linhas de código, por volta de 1984, ainda não havia internet, e o
+            conhecimento era adquirido através de algum curso ou de livros, ambos na época escassos e de difícil
+            acesso para um candidato a <i>developer</i> de uma pequena cidade do interior do Estado de São Paulo.
+        </p>
+        <p>Minha primeira tentativa de desenvolver um aplicativo para contabilidade, utilizando um TK2000 que
+            comprei na época (1984), por sinal muito caro, não logrou exito, pois o equipamento que eu tinha para
+            armazenar os dados (para o que atualmente utilizamos HD, SSD, etc) era um gravador de fitas cassete, o
+            que me fez desistir, porque esse sistema de armazenamento era muito falho.</p>
+        <p>Por fim, no início dos anos 1990, devido a aquisição de um microcomputador XT pela empresa onde eu
+            trabalhava, é que eu consegui realmente iniciar minha jornada de desenvolvedor, utilizando as
+            ferramentas de desenvolvimento DBase e Clipper.</p>
+        <p>Atualmente trabalho na área de desenvolvimento de software em um grande conglomerado brasileiro, que
+            possui talvez o maior parque tecnológico da América Latina.</p>
+    </div>
+
+    <div class="about-observation">Obs.: Alguns dos termos que utilizei acima, como TK2000, XT, DBase, Clipper, são
+        antigos, se quiser saber mais procure no nosso amigo Google.</div>
+
+    <div class="sub-title">Ferramenta:</div>
+
+    <div class="about-tool">
+        <div class="about-title-description">Site desenvolvido com</div>
+        <div>
+            <img src="assets/tools/angular-48px.png" class="about-tool-icon">
+        </div>
+        <div class="about-tool-name">Angular</div>
+    </div>
+
+    <div class="sub-title">Desenvolvimento:</div>
+
+    <div class="about-tool">
+        <div class="about-title-description">Desenvolvedor</div>
+        <div class="about-tool-name">Nivaldo Hydalgo</div>
+        <div class="about-tool-name">Versão 1.0.0</div>
+        <div class="about-title-description">Produzido no</div>
+        <div class="about-tool-name">Brasil</div>
+        <div>
+            <img src="assets/imgs/brazil.png" class="about-brazil-icon">
+        </div>
+    </div>
 
 </div>
-

@@ -1,92 +1,67 @@
-<div>
+<div class="help-container">
+    <div class="major-title">AJUDA</div>
 
-    <div *ngIf="recoverAPI; else loading">
-
-        <div *ngIf="!recoverError; else error">
-
-            <!----------------------------- TEMPLATE DO HELP ------------------------------>
-
-            <div class="help-container">
-                <div class="major-title">AJUDA</div>
-            
-                <div class="help-description">Este site contem artigos, que estão separados em <b>Áreas</b> tematicas conforme o conteúdo do artigo:</div>
-                <div class="help-list-box">
-                    <!-- Lista de Areas -->
-                    <div *ngFor="let area of areas">
-                        <app-area-button [area]="area" [isLink]="isLink"></app-area-button> 
-                    </div>
-                </div>
-                <div class="help-divider"></div>
-            
-                <div class="help-description">Dentro das Áreas tematicas, os artigos estão separados em <b>Temas</b> mais específicos, como por exemplo: linguagens, frameworks, ou outros assuntos distintos, sendo alguns exemplos:</div>
-                <div class="help-list-box">
-                    <!-- Botões dos Temas da Area -->
-                    <div *ngFor="let theme of area_themes">
-                        <app-theme-button [theme]="theme" 
-                            [isLink]="isLink" 
-                            [showQuantity]="showQuantity">
-                        </app-theme-button>
-                    </div>
-                </div>
-                <div class="help-description">Obs.: O número que aparece no botão do Tema é a quantidade de artigos publicados para aquele tema na área tematica selecionada.</div>
-                <div class="help-divider"></div>
-            
-                <div class="help-description">Navegue no site, é bastante intuitivo.</div>
-                <div class="help-divider"></div>
-            
-                <div class="sub-title">Sobre os artigos:</div>
-                <app-button-article [article]="article"></app-button-article>
-            
-                <div class="help-description">
-                    O botão ou cabeçalho do Artigo (vide abaixo), além do titulo e de uma descrição mais detalhada, 
-                    contém a data em que o Artigo foi publicado ou da sua última atualização, e também 
-                    a que Área e Tema pertence. 
-                </div>
-
-                <div class="help-description">
-                    As estrelas indicam o nível considerado para o Artigo, podendo ser:
-                </div>
-                <div class="help-list-box">
-                    <li class="help-list">
-                        <app-level-show [level]="level_1"></app-level-show> 
-                        &nbsp;&nbsp;Iniciante
-                    </li>
-                    <li class="help-list">
-                        <app-level-show [level]="level_2"></app-level-show>  
-                        &nbsp;&nbsp;Intermediario
-                    </li>
-                    <li class="help-list">
-                        <app-level-show [level]="level_3"></app-level-show> 
-                        &nbsp;&nbsp;Avançado
-                    </li>
-                </div>
-                <div class="help-divider"></div>
-            
-                <div class="help-description">
-                    A palavra <app-new-show></app-new-show> indica que o Artigo é novo no site, uma publicação considerada recente.
-                </div>
-            
-                <div>
-                    <app-article-button 
-                        [article]="article"
-                        [isLink]="isLink">
-                    </app-article-button>
-                </div>
-            
-            </div>
-
-            <!----------------------------------------------------------------------------->
-
+    <div class="help-description">Este site contem artigos, que estão separados em <b>Áreas</b> tematicas conforme o
+        conteúdo do artigo:</div>
+    <div class="help-list-box">
+        <!-- Lista de Areas -->
+        <div *ngFor="let area of areas">
+            <app-area-button [area]="area" [isLink]="isLink"></app-area-button>
         </div>
+    </div>
+    <div class="help-divider"></div>
 
-        <ng-template #error>
-            <app-process-error [errorMsg]="errorMsg"></app-process-error>
-        </ng-template>
-    
+    <div class="help-description">Dentro das Áreas tematicas, os artigos estão separados em <b>Temas</b> mais
+        específicos, como por exemplo: linguagens, frameworks, ou outros assuntos distintos, sendo alguns exemplos:
+    </div>
+    <div class="help-list-box">
+        <!-- Botões dos Temas da Area -->
+        <div *ngFor="let theme of area_themes">
+            <app-theme-button [theme]="theme" [isLink]="isLink" [showQuantity]="showQuantity">
+            </app-theme-button>
+        </div>
+    </div>
+    <div class="help-description">Obs.: O número que aparece no botão do Tema é a quantidade de artigos publicados para
+        aquele tema na área tematica selecionada.</div>
+    <div class="help-divider"></div>
+
+    <div class="help-description">Navegue no site, é bastante intuitivo.</div>
+    <div class="help-divider"></div>
+
+    <div class="sub-title">Sobre os artigos:</div>
+  
+    <div class="help-description">
+        O botão ou cabeçalho do Artigo (vide abaixo), além do titulo e de uma descrição mais detalhada,
+        contém a data em que o Artigo foi publicado ou da sua última atualização, e também
+        a que Área e Tema pertence.
     </div>
 
-    <ng-template #loading>
-        <app-loading></app-loading>
-    </ng-template>
+    <div class="help-description">
+        As estrelas indicam o nível considerado para o Artigo, podendo ser:
+    </div>
+    <div class="help-list-box">
+        <li class="help-list">
+            <app-level-show [level]="level_1"></app-level-show>
+            &nbsp;&nbsp;Iniciante
+        </li>
+        <li class="help-list">
+            <app-level-show [level]="level_2"></app-level-show>
+            &nbsp;&nbsp;Intermediario
+        </li>
+        <li class="help-list">
+            <app-level-show [level]="level_3"></app-level-show>
+            &nbsp;&nbsp;Avançado
+        </li>
+    </div>
+    <div class="help-divider"></div>
+
+    <div class="help-description">
+        A palavra <app-new-show></app-new-show> indica que o Artigo é novo no site, uma publicação considerada recente.
+    </div>
+
+    <div>
+        <app-article-button [article]="article" [isLink]="isLink">
+        </app-article-button>
+    </div>
 
 </div>
